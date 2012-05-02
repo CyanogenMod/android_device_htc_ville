@@ -92,6 +92,9 @@ TARGET_USES_OVERLAY := true
 TARGET_QCOM_HDMI_OUT := true
 BOARD_EGL_CFG := device/htc/ville/configs/egl.cfg
 
+# USB
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+
 # Wifi
 WIFI_BAND                        := 802_11_ABG
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
