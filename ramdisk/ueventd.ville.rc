@@ -1,0 +1,9 @@
+# for modem link
+/sys/module/serial/parameters/modem_enabled    0600    system  system
+/dev/ttyHSUSB0                                 0600    system  system
+/dev/ttySA0                                    0600    system  system
+/dev/smd9                                      0600    system  system
+
+# for autobot car pc
+/dev/ttyHSUSB3                                 0660    autobot_access autobot_access
+/dev/ttyHSUSB1                                 0600    system system
