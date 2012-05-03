@@ -159,12 +159,6 @@ service akmd /system/bin/akmd
     user compass
     group compass misc input
 
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
-    user shell
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
 service cand /system/bin/cand
     user root
 
@@ -262,12 +256,6 @@ service zchgd_onmode /system/bin/zchgd -onmode
     user root
     group root graphics
     oneshot
-
-on property:init.svc.bluetoothd=running
-    start btwlancoex
-
-on property:init.svc.bluetoothd=stopped
-    stop btwlancoex
 
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
