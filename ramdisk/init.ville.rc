@@ -104,13 +104,6 @@ on init
     chown system system /dev/ttySA0
     chown system system /dev/smd9
 
-    # for CM performance
-    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
-    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
-    chown root system /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
-
-    chown system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
-
     # for simlock
     chown radio radio /dev/simlock
     chmod 0660 /dev/simlock
@@ -125,11 +118,6 @@ on init
     # Chown polling nodes as needed from UI running on system server
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chown system system /sys/devices/platform/msm_sdcc.1/polling
-
-    # overwrite framework low memory killer setting
-    write /sys/module/lowmemorykiller/parameters/minfree 2048,3072,4096,6144,8192,12288
-    write /sys/module/lowmemorykiller/parameters/minfile 2048,3072,4096,6144,8192,12288
-    write /sys/module/lowmemorykiller/parameters/check_filepages 1
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
