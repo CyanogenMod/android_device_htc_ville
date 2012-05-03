@@ -10,7 +10,6 @@ bin/mm-abl-daemon
 bin/mpdecision
 bin/netmgrd
 bin/netsharing
-bin/rild
 bin/rmt_storage
 bin/qmuxd
 bin/sdptool

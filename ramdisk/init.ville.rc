@@ -205,13 +205,6 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio
 
-service ril-daemon1 /system/bin/rild -c 1
-    socket rild1 stream 660 root radio
-    socket rild-debug1 stream 660 radio system
-    user root
-    disabled
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
-
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p24 \
         /dev/block/mmcblk0p25 /dev/block/mmcblk0p22 /dev/block/mmcblk0p20
     class late_start
