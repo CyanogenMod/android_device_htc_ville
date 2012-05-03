@@ -52,17 +52,10 @@ lib/libC2D2.so
 lib/libsc-a2xx.so
 
 # Misc libraries
-lib/libdiag.so
-lib/libdsi_netctrl.so
-lib/libdsutils.so
 lib/libgsl.so
-lib/libidl.so
 lib/libmm-color-convertor.so
 lib/libnetmgr.so
 lib/libOpenVG.so
-lib/libqdp.so
-lib/libqmiservices.so
-lib/libqmi.so
 lib/libv8.so
 
 # OMX
@@ -76,6 +69,13 @@ lib/libOmxVenc.so
 lib/libOmxWmaDec.so
 
 # Radio
+lib/libdiag.so
+lib/libdsi_netctrl.so
+lib/libdsutils.so
+lib/libidl.so
+lib/libqdp.so
+lib/libqmiservices.so
+lib/libqmi.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libril.so
