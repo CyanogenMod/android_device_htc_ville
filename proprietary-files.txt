@@ -19,9 +19,9 @@ bin/time_daemon
 bin/zchgd
 
 # Audio
-lib/hw/alsa.default.so
-lib/hw/audio_policy.default.so
-lib/hw/audio.primary.default.so
+#lib/hw/alsa.default.so
+#lib/hw/audio_policy.default.so
+#lib/hw/audio.primary.default.so
 lib/libacdbloader.so
 lib/libalsa-intf.so
 lib/libaudcal.so
