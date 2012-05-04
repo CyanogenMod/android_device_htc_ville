@@ -7,10 +7,11 @@ on early-init
     symlink /mnt/sdcard /sdcard
 
 on early-fs
-    mkdir /system
-    mkdir /data 0771 system system
-    mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
+
+    # double check perms and set owner
+    chown root root /devlog
+    chmod 0700 /devlog
 
     mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p35 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
@@ -34,12 +35,6 @@ on early-fs
     mount vfat /dev/block/mmcblk0p17 /firmware_radio ro shortname=lower
     mount vfat /dev/block/mmcblk0p18 /firmware_q6 ro shortname=lower
     mount vfat /dev/block/mmcblk0p19 /firmware_wcnss ro shortname=lower
-
-    # double check perms and set owner
-    chown root root /devlog
-    chmod 0700 /devlog
-
-    mount rootfs rootfs / remount
 
     # use qcom link scripts for firmware links
     #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
