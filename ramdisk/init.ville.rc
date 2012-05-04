@@ -133,6 +133,12 @@ on boot
     write /proc/sys/net/core/rmem_max 1220608
     write /proc/sys/net/core/wmem_max 1220608
 
+    # cyttsp update
+    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
+
+    # for netmgr daemon to inform the USB driver of the correct transport
+    chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
+
 # Services start here
 
 service abld /system/bin/mm-abl-daemon
