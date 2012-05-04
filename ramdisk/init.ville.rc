@@ -12,6 +12,11 @@ on early-fs
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
 
+    mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p35 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p34 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
+
     # msm8960 firmware
     mkdir /system/etc/firmware 0771 system system
 
@@ -19,19 +24,16 @@ on early-fs
     mkdir /firmware_q6 0771 system system
     mkdir /firmware_radio 0771 system system
     mkdir /firmware_wcnss 0771 system system
+
     #wait /dev/block/mmcblk0p16
     wait /dev/block/mmcblk0p17
     wait /dev/block/mmcblk0p18
     wait /dev/block/mmcblk0p19
+
     #mount vfat /dev/block/mmcblk0p16 /firmware_dsps
     mount vfat /dev/block/mmcblk0p17 /firmware_radio ro shortname=lower
     mount vfat /dev/block/mmcblk0p18 /firmware_q6 ro shortname=lower
     mount vfat /dev/block/mmcblk0p19 /firmware_wcnss ro shortname=lower
-
-    mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p35 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p34 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
     # double check perms and set owner
     chown root root /devlog
@@ -124,8 +126,6 @@ on early-boot
     setrlimit 8 67108864 67108864
 
 on boot
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
-
     # Define TCP buffer sizes for various networks
     setprop net.tcp.buffersize.hspa 4096,174760,3145728,4096,16384,110208
     setprop net.tcp.buffersize.hsupa 4096,174760,1572864,4096,16384,110208
