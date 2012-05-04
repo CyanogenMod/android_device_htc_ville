@@ -50,10 +50,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/recovery/sbin/detect_key:recovery/root/sbin/detect_key \
     device/htc/ville/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt
 
-# EGL config
-PRODUCT_COPY_FILES += \
-    device/htc/ville/configs/egl.cfg:system/lib/egl/egl.cfg
-
 # GPS config
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
