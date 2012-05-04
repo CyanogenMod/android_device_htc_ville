@@ -63,6 +63,9 @@ TARGET_PREBUILT_KERNEL := device/htc/ville/prebuilt/kernel
 #TARGET_KERNEL_CONFIG := ville_defconfig
 #TARGET_KERNEL_SOURCE := kernel/htc/ville
 
+# Init
+TARGET_PROVIDES_INIT_RC := true
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 

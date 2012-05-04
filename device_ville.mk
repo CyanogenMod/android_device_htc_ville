@@ -23,6 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/ville/overlay
 PRODUCT_COPY_FILES += \
     device/htc/ville/prebuilt/init:root/init \
     device/htc/ville/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/htc/ville/ramdisk/init.rc:root/init.rc \
     device/htc/ville/ramdisk/init.ville.rc:root/init.ville.rc \
     device/htc/ville/ramdisk/init.ville.usb.rc:root/init.ville.usb.rc \
     device/htc/ville/ramdisk/ueventd.ville.rc:root/ueventd.ville.rc
