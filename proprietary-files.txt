@@ -7,6 +7,7 @@ bin/cand
 bin/charging
 bin/ewtzmud
 bin/mm-abl-daemon
+bin/mm-qcamera-daemon
 bin/mpdecision
 bin/netmgrd
 bin/netsharing

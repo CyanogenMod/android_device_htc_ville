@@ -188,6 +188,10 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 service netmgrd /system/bin/netmgrd
     class late_start
 
+service qcamerasvr /system/bin/mm-qcamera-daemon
+    user system
+    group system camera inet
+
 service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     user root
     disabled
