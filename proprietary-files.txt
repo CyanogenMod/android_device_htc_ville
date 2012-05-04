@@ -22,9 +22,13 @@ bin/zchgd
 lib/hw/alsa.default.so
 lib/hw/audio_policy.default.so
 lib/hw/audio.primary.default.so
+lib/libacdbloader.so
+lib/libalsa-intf.so
 lib/libaudcal.so
 lib/libaudioalsa.so
+lib/libbeatscorehtc.so
 lib/libhtc_acoustic.so
+lib/libsrscorehtc.so
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
@@ -33,8 +37,10 @@ lib/libchromatix_s5k3h2yx_hfr.so
 lib/libchromatix_s5k3h2yx_preview.so
 lib/libchromatix_s5k3h2yx_zsl.so
 lib/hw/camera.msm8960.so
+lib/libcamera_client.so
 lib/libcameraface.so
 lib/libcamerapp.so
+lib/libDxOAF.so
 lib/libgemini.so
 lib/libmmipl.so
 lib/libmmjpeg.so
@@ -52,11 +58,15 @@ lib/libC2D2.so
 lib/libsc-a2xx.so
 
 # Misc libraries
+lib/libdiag.so
 lib/libgsl.so
 lib/libmm-color-convertor.so
 lib/libnetmgr.so
+lib/libnetutils.so
 lib/libOpenVG.so
-lib/libv8.so
+lib/libqmi_cci.so
+lib/libqmi_csi.so
+lib/libqmi_common_so.so
 
 # OMX
 lib/libdivxdrmdecrypt.so
@@ -69,10 +79,10 @@ lib/libOmxVenc.so
 lib/libOmxWmaDec.so
 
 # Radio
-lib/libdiag.so
 lib/libdsi_netctrl.so
 lib/libdsutils.so
 lib/libidl.so
+lib/libqdi.so
 lib/libqdp.so
 lib/libqmiservices.so
 lib/libqmi.so
