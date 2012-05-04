@@ -432,8 +432,10 @@ service ril-daemon /system/bin/rild
     class main
     socket rild stream 660 root radio
     socket rild-debug stream 660 radio system
+    socket rild-htc stream 660 radio system
+    socket aepls001 stream 660 radio system
     user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
+    group radio cache inet misc audio sdcard_rw qcom_oncrpc log diag
 
 service surfaceflinger /system/bin/surfaceflinger
     class main
