@@ -6,21 +6,19 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-on early-fs
+on emmc
+    mkdir /system
+    mkdir /data 0771 system system
+    mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
-
-    # double check perms and set owner
-    chown root root /devlog
-    chmod 0700 /devlog
 
     mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p35 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p34 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
     mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
+on emmc-fs
     # msm8960 firmware
-    mkdir /system/etc/firmware 0771 system system
-
     #mkdir /firmware_dsps 0771 system system
     mkdir /firmware_q6 0771 system system
     mkdir /firmware_radio 0771 system system
@@ -42,6 +40,11 @@ on early-fs
     exec /system/bin/sh /system/etc/init.qcom.radio_links.sh
     exec /system/bin/sh /system/etc/init.qcom.wcnss_links.sh
 
+on init
+    # double check perms and set owner
+    chown root root /devlog
+    chmod 0700 /devlog
+
     # sensors
     chown compass system /dev/akm8975_aot
     chown compass system /dev/akm8975_daemon
@@ -57,6 +60,31 @@ on early-fs
     chmod 0640 /dev/ewtzmu2hal
     chmod 0640 /dev/ewtzmu2
 
+
+on boot
+    # bluetooth
+    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
+    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+    chown system system /sys/module/sco/parameters/disable_esco
+    chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
+    chmod 0660 /sys/module/bluetooth_power/parameters/power
+    chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /proc/bluetooth/sleep/proto
+    chown bluetooth bluetooth /dev/ttyHS0
+    chmod 0660 /dev/ttyHS0
+    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
+
+    # for modem link
+    chown system system /sys/module/serial/parameters/modem_enabled
+    chown system system /dev/ttyHSUSB0
+    chown system system /dev/ttySA0
+    chown system system /dev/smd9
+
     # wifi
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -65,23 +93,8 @@ on early-fs
     mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
-
-    # audio
-    mkdir /data/audio 0775 media audio
-
-    # radio
-    mkdir /data/radio 0770 radio radio
-
-on init
-    # bluetooth
-    mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
-    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
-    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
-    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-    chmod 0660 /sys/module/bluetooth_power/parameters/power
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-    chmod 0660 /proc/bluetooth/sleep/proto
+    setprop wifi.interface wlan0
+    setprop ro.product.wireless WCN3660
 
     # liblights
     chown system system /sys/class/leds/green/brightness
@@ -95,28 +108,52 @@ on init
     chown system system /sys/class/leds/flashlight/brightness
     chmod 0660          /sys/class/leds/flashlight/brightness
 
-    # for wireless modem
-    chown system system /sys/module/serial/parameters/modem_enabled
-    chown system system /dev/ttyHSUSB0
-    chown system system /dev/ttySA0
-    chown system system /dev/smd9
+    # set diag permissions
+    chown radio radio /dev/diag
+    chown radio radio /dev/diag_mdm
+    chown radio radio /dev/htcdiag
+    chown radio radio /dev/diag_arm9
+    chown radio radio /dev/btdiag
+    chmod 0660 /dev/diag
+    chmod 0660 /dev/diag_mdm
+    chmod 0660 /dev/htcdiag
+    chmod 0660 /dev/diag_arm9
+    chmod 0660 /dev/btdiag
+
+    # Chown polling nodes as needed from UI running on system server
+    chown system system /persist
+    chmod 0771 /persist
+    chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
+    chown system system /sys/devices/platform/msm_sdcc.1/polling
+
+    # port-bridge
+    chmod 0660 /dev/smd0
+    chown system system /dev/smd0
+
+    chmod 0660 /dev/ttyGS0
+    chown system system /dev/ttyGS0
+
+    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
+
+    # symlink for HDMI
+    symlink /dev/graphics/fb1 /dev/graphics/hdmi
+
+    # for netmgr daemon to inform the USB driver of the correct transport
+    chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
+
+    # create folder for time-services
+    mkdir /data/time 0700 system system
+
+    # audio
+    mkdir /data/audio 0775 media audio
+
+    # radio
+    mkdir /data/radio 0770 radio radio
 
     # for simlock
     chown radio radio /dev/simlock
     chmod 0660 /dev/simlock
 
-    # low charge current in voice call
-    chown radio radio /sys/class/power_supply/battery/phone_call
-    chown radio radio /sys/class/power_supply/battery/network_search
-
-    # for slate charging timer
-    chown radio /sys/class/power_supply/battery/charger_timer
-
-    # Chown polling nodes as needed from UI running on system server
-    chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
-    chown system system /sys/devices/platform/msm_sdcc.1/polling
-
-on boot
     # Define TCP buffer sizes for various networks
     setprop net.tcp.buffersize.hspa 4096,174760,3145728,4096,16384,110208
     setprop net.tcp.buffersize.hsupa 4096,174760,1572864,4096,16384,110208
@@ -125,15 +162,18 @@ on boot
     setprop net.tcp.buffersize.edge 4096,174760,1572864,4096,16384,35040
     setprop net.tcp.buffersize.gprs 4096,174760,1572864,4096,8760,11680
 
-    # Assign TCP buffer thresholds to be ceiling value of technology maximums
-    write /proc/sys/net/core/rmem_max 1220608
-    write /proc/sys/net/core/wmem_max 1220608
+    # load kineto_gan.ko
+    insmod /system/lib/modules/kineto_gan.ko
+
+    # low charge current in voice call
+    chown radio radio /sys/class/power_supply/battery/phone_call
+    chown radio radio /sys/class/power_supply/battery/network_search
+
+    # for slate charging timer
+    chown radio /sys/class/power_supply/battery/charger_timer
 
     # cyttsp update
     write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
-
-    # for netmgr daemon to inform the USB driver of the correct transport
-    chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
 
 # Services start here
 
