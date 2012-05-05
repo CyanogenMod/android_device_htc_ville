@@ -9,9 +9,12 @@ debug.enabletr=true
 dev.pm.dyn_samplingrate=1
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+ro.baseband.arch=msm
+
 # htc v4 ril
 ro.telephony.ril.v3=signalstrength
-ro.baseband.arch=msm
 ro.ril.enable.garbage.filter=0
 
 ro.ril.ecc.HTC-GCC=999,112,997

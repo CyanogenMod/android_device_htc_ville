@@ -88,6 +88,7 @@ lib/libOmxWmaDec.so
 lib/libdsi_netctrl.so
 lib/libdsutils.so
 lib/libidl.so
+lib/libqc-opt.so
 lib/libqdi.so
 lib/libqdp.so
 lib/libqmiservices.so
