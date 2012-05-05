@@ -8,21 +8,38 @@ ro.sf.compbypass.enable=1
 debug.enabletr=true
 dev.pm.dyn_samplingrate=1
 
-rild.libpath=/system/lib/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
-ro.vendor.extension_library=/system/lib/libqc-opt.so
-ro.baseband.arch=msm
-
 # htc v4 ril
 ro.telephony.ril.v3=signalstrength
 ro.ril.enable.garbage.filter=0
 
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+persist.rild.ril.ltedr=0
+persist.rild.ril.ltedrtable=max_retries=infinite,10000
+ril.subscription.types=NV,RUIM
+
+persist.radio.adb_log_on=1
+ro.baseband.arch=msm
+
 ro.ril.ecc.HTC-GCC=999,112,997
 ro.ril.ecc.HTC-WWE=999
 ro.ril.ecc.HTC-Dutch=112
+ro.ril.ecc.HTC-SPA=112,911
 ro.ril.ecc.HTC-FRA=112
 ro.ril.ecc.HTC-ITA=112,911
 ro.ril.ecc.HTC-EastEurope=112
+
 ro.ril.enable.a52.HTC-ITA=1
 ro.ril.enable.a53.HTC-ITA=1
 ro.ril.enable.a52=0
@@ -32,6 +49,17 @@ ro.ril.fast.dormancy.rule=1
 ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
 ro.ril.enable.sdr=1
 ro.ril.enable.amr.wideband=1
+ro.ril.enable.r8fd=0
+ro.ril.disable.cpc=
+
+ro.ril.fd.pre_r8_tout_scr_off=2
+ro.ril.fd.pre_r8_tout.scr_on=3
+ro.ril.fd.r8_tout.scr_off=0
+ro.ril.fd.r8_tout.scr_on=0
+
+# data module
+ro.use_data_netmgrd=true
+persist.data_netmgrd_mtu=1440
 
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
@@ -56,6 +84,11 @@ ro.ril.disable.power.collapse=1
 # For China NEL
 ro.ril.enable.prl.recognition=1
 
+# wifi
+init.svc.wpa_supplicant=
+init.svc.dhcpcd_wlan0=
+wifi.wpa_supp_ready=
+wlan.driver.status=
 wifi.interface=wlan0
 wifi.supplicant_scan_interval=30
 
@@ -75,6 +108,9 @@ ro.opengles.version=131072
 
 # For emmc phone storage
 ro.phone_storage=0
+
+# for BT HCI transport
+ro.qualcomm.bt.hci_transport=smd
 
 # System prop for switching gps driver to qmi
 persist.gps.qmienabled=true
