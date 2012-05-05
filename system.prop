@@ -5,12 +5,14 @@
 ro.sf.lcd_density=240
 
 # RIL properties
+mobiledata.interfaces=rmnet0,rmnet1
 ro.telephony.default_network=0
-#ro.telephony.ril_class=LGEQualcomm
-ro.telephony.ril.v3=signalstrength,qcomuiccstack
+#ro.telephony.ril_class=LGEQualcommUiccRIL
+ro.telephony.ril.v3=facilitylock,datacall,icccardstatus,singlepdp,qcomuiccstack
+DEVICE_PROVISIONED=1
+#ril.subscription.types=NV,RUIM
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-#ril.subscription.types=NV,RUIM
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.baseband.arch=msm
 
