@@ -115,6 +115,9 @@ ro.qualcomm.bt.hci_transport=smd
 # System prop for switching gps driver to qmi
 persist.gps.qmienabled=true
 
+# enable time services
+persist.timed.enable=true
+
 # System property for cabl
 ro.qualcomm.cabl=0
 

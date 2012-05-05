@@ -302,7 +302,6 @@ on property:persist.thermal.monitor=true
     start thermald
 
 on property:persist.timed.enable=true
-    mkdir /data/time 0700
     start time_daemon
 
 on property:ro.emmc=1
