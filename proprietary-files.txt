@@ -73,6 +73,7 @@ lib/libOpenVG.so
 lib/libqmi_cci.so
 lib/libqmi_csi.so
 lib/libqmi_common_so.so
+lib/libqmi_encdec.so
 
 # OMX
 lib/libdivxdrmdecrypt.so
