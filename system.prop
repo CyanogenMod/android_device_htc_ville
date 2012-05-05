@@ -8,10 +8,7 @@ ro.sf.compbypass.enable=1
 debug.enabletr=true
 dev.pm.dyn_samplingrate=1
 
-# htc v4 ril
-ro.telephony.ril.v3=signalstrength
-ro.ril.enable.garbage.filter=0
-
+# RIL properties
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
@@ -74,6 +71,7 @@ ro.ril.hsxpa=4
 # Default network type.
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
+#ro.telephony.ril.v3=signalstrength
 
 # Modify MTU from 1500 to 1472 on 3G network
 ro.ril.set.mtu1472=1
