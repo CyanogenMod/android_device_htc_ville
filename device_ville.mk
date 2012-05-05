@@ -127,9 +127,9 @@ PRODUCT_PACKAGES += \
     libtilerenderer
 
 # GPS and Light
-PRODUCT_PACKAGES += \
-    gps.ville \
-    lights.ville
+#PRODUCT_PACKAGES += \
+#    gps.ville \
+#    lights.ville
 
 # OMX
 PRODUCT_PACKAGES += \

@@ -57,6 +57,12 @@ lib/egl/libq3dtools_adreno200.so
 lib/libC2D2.so
 lib/libsc-a2xx.so
 
+# GPS
+lib/hw/gps.default.so
+
+# Lights
+lib/hw/lights.msm8960.so
+
 # Misc libraries
 lib/libdiag.so
 lib/libgsl.so
