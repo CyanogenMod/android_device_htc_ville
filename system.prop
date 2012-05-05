@@ -49,3 +49,6 @@ ro.qualcomm.cabl=0
 
 # System property for thermald
 persist.thermal.monitor=true
+
+# UMS
+persist.sys.usb.config=mass_storage,adb
