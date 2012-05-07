@@ -96,6 +96,10 @@ on boot
     setprop wifi.interface wlan0
     setprop ro.product.wireless WCN3660
 
+    # create symlink to qcn wpa_supplicant folder
+    symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
+    symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
+
     # liblights
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
