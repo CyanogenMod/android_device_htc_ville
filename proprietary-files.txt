@@ -42,6 +42,9 @@ lib/libcameraface.so
 lib/libcamerapp.so
 lib/libDxOAF.so
 lib/libgemini.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_rawchipproc.so
+lib/libmmcamera_statsproc30.so
 lib/libmmipl.so
 lib/libmmjpeg.so
 lib/liboemcamera.so
