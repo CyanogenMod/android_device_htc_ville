@@ -133,12 +133,12 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    libdivxdrmdecrypt \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libOmxVenc \
     libstagefrighthw
-#    libdivxdrmdecrypt \
-#    libmm-omxcore \
-#    libOmxCore \
-#    libOmxVdec \
-#    libOmxVenc \
 
 # HDMI
 PRODUCT_PACKAGES += \

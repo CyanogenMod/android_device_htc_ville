@@ -75,14 +75,6 @@ lib/libmm-color-convertor.so
 lib/libOpenVG.so
 
 # OMX
-lib/libdivxdrmdecrypt.so
-lib/libOmxAacDec.so
-lib/libOmxCore.so
-lib/libOmxEvrcDec.so
-lib/libOmxQcelp13Dec.so
-lib/libOmxVdec.so
-lib/libOmxVenc.so
-lib/libOmxWmaDec.so
 
 # Qualcomm/HTC common libs
 lib/libdiag.so
