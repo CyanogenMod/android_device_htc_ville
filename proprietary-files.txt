@@ -13,7 +13,6 @@ bin/netmgrd
 bin/netsharing
 bin/rmt_storage
 bin/qmuxd
-bin/sdptool
 bin/thermald
 bin/time_daemon
 bin/zchgd
