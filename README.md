@@ -12,7 +12,5 @@ Known issues:
 * Bluetooth does not turn on
 * Wifi tethering does not work
 * Wifi calling not available
-* Video playback garbled
-* Camera preview garbled
 * Camcorder does not initialize properly
 * Radio DHCP fails when switching to 2G
