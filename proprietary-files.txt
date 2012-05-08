@@ -29,6 +29,7 @@ lib/libaudioalsa.so
 lib/libbeatscorehtc.so
 lib/libhtc_acoustic.so
 lib/libsrscorehtc.so
+lib/libsrsprocessing.so
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
