@@ -17,19 +17,6 @@ bin/thermald
 bin/time_daemon
 bin/zchgd
 
-# Audio
-#lib/hw/alsa.default.so
-#lib/hw/audio_policy.default.so
-#lib/hw/audio.primary.default.so
-lib/libacdbloader.so
-lib/libalsa-intf.so
-lib/libaudcal.so
-lib/libaudioalsa.so
-lib/libbeatscorehtc.so
-lib/libhtc_acoustic.so
-lib/libsrscorehtc.so
-lib/libsrsprocessing.so
-
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
 lib/libchromatix_s5k3h2yx_hdr.so
