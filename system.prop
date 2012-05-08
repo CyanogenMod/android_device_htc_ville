@@ -24,7 +24,6 @@ ro.sf.compbypass.enable=1
 
 com.qc.hardware=true
 com.qc.hdmi_out=true
-ro.hdmi.enable=true
 
 # qcom cpu governor service
 dev.pm.dyn_samplingrate=1
