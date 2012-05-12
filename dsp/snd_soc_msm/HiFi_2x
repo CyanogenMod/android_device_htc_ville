@@ -1,4 +1,4 @@
-#XD_HiFi_Merge_2x_ville_20120315
+#XD_HiFi_Merge_2x_ville_20120330
 
 SectionVerb
 	Name "HiFi"
@@ -527,6 +527,24 @@ SectionVerb
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
 	EndSequence
 
+# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFiSpeaker Car Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+	
 	# ALSA PCMs
 	CapturePCM 0
 	PlaybackPCM 0
@@ -539,23 +557,6 @@ SectionVerb
 
 	# ALSA PCMs
 	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerLine"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
 	ACDBID 0:0
 
 EndSection
@@ -1004,6 +1005,23 @@ SectionVerb
 
 EndSection
 
+SectionVerb
+	Name "HiFi Low PowerSpeaker Car Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 4
+	ACDBID 0:0
+
+EndSection
+	
 SectionVerb
 	Name "HiFi Rec"
 
@@ -1592,6 +1610,24 @@ EndSection
 
 SectionVerb
 	Name "HiFi RecHeadset Beats HW VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi RecLine Car Voice"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -2573,6 +2609,36 @@ SectionVerb
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 2
+	PlaybackPCM 2
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "Voice CallLine Car Voice"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer CSVoice':1:1
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 2
+	PlaybackPCM 2
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "Voice CallSpeaker Car Voice"
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer CSVoice':1:0
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -3654,6 +3720,46 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "Voice Call IPLine Car Voice"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 3
+	PlaybackPCM 3
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "Voice Call IPSpeaker Car Voice"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 3
+	PlaybackPCM 3
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
 	Name "FM Digital RadioEarpiece"
 
 	EnableSequence
@@ -4116,6 +4222,27 @@ SectionVerb
 EndSection
 
 SectionVerb
+	Name "FM Digital RadioSpeaker Car Voice"
+
+	EnableSequence
+		'Internal FM RX Volume':1:0
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
+		'SLIMBUS_DL_HL Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
+		'SLIMBUS_DL_HL Switch':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 6
+	PlaybackPCM 5
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
 	Name "FM REC"
 
 	EnableSequence
@@ -4147,6 +4274,23 @@ SectionVerb
 	# ALSA PCMs
 	CapturePCM 1
 	PlaybackPCM 1
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker Car Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
 	ACDBID 0:0
 
 EndSection
@@ -4598,15 +4742,15 @@ SectionDevice
 		'SLIM_0_TX Channels':0:Two
 		'SLIM TX7 MUX':0:DEC6
 		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':1:67
+		'DEC6 Volume':1:68
 		'ADC1 Volume':1:100
 		'MICBIAS1 CAPLESS Switch':1:0
 		'MICBIAS1 PD MODE':1:1
 		'SLIM TX8 MUX':0:DEC4
 		'DEC4 MUX':0:ADC3
-		'DEC4 Volume':1:67
+		'DEC4 Volume':1:68
 		'ADC3 Volume':1:100
-		'MICBIAS3 CAPLESS Switch':1:1
+		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
@@ -4659,35 +4803,23 @@ SectionDevice
 	Comment "Dual MIC Endfire Tx device"
 
 	EnableSequence
-		'SLIM_0_TX Channels':0:Two
-		'SLIM TX7 MUX':0:DEC6
-		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':1:67
-		'ADC1 Volume':1:100
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS1 PD MODE':1:1
-		'SLIM TX8 MUX':0:DEC4
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC4
 		'DEC4 MUX':0:ADC3
-		'DEC4 Volume':1:67
+		'DEC4 Volume':1:70
 		'ADC3 Volume':1:100
 		'MICBIAS3 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
 		'ADC3 Volume':1:0
-		'ADC1 Volume':1:0
 		'DEC4 Volume':1:0
-		'DEC6 Volume':1:0
 		'DEC4 MUX':0:ZERO
-		'DEC6 MUX':0:ZERO
 		'SLIM TX7 MUX':0:ZERO
-		'SLIM TX8 MUX':0:ZERO
-		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS1 PD MODE':1:0
 		'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
-	ACDBID 13:2
+	ACDBID 11:2
 
 EndSection
 
@@ -5517,12 +5649,13 @@ SectionDevice
 		'DEC6 Volume':1:67
 		'ADC1 Volume':1:50
 		'MICBIAS1 CAPLESS Switch':1:0
+		'MICBIAS3 CAPLESS Switch':1:0
 		'MICBIAS1 PD MODE':1:1
+		'MICBIAS3 PD MODE':1:1
 		'SLIM TX8 MUX':0:DEC4
 		'DEC4 MUX':0:ADC3
 		'DEC4 Volume':1:67
 		'ADC3 Volume':1:50
-		'MICBIAS3 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -5535,8 +5668,9 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS1 PD MODE':1:0
 		'MICBIAS3 CAPLESS Switch':1:0
+		'MICBIAS1 PD MODE':1:0
+		'MICBIAS3 PD MODE':1:0
 	EndSequence
 
 	ACDBID 506:2
@@ -5553,7 +5687,8 @@ SectionDevice
 		'DEC4 MUX':0:ADC3
 		'DEC4 Volume':1:67
 		'ADC3 Volume':1:50
-		'MICBIAS3 CAPLESS Switch':1:1
+		'MICBIAS3 CAPLESS Switch':1:0
+		'MICBIAS3 PD MODE':1:1
 	EndSequence
 
 	DisableSequence
@@ -5562,6 +5697,7 @@ SectionDevice
 		'DEC4 MUX':0:ZERO
 		'SLIM TX7 MUX':0:ZERO
 		'MICBIAS3 CAPLESS Switch':1:0
+		'MICBIAS3 PD MODE':1:0
 	EndSequence
 
 	ACDBID 507:2
@@ -5579,12 +5715,13 @@ SectionDevice
 		'DEC6 Volume':1:67
 		'ADC1 Volume':1:50
 		'MICBIAS1 CAPLESS Switch':1:0
+		'MICBIAS3 CAPLESS Switch':1:0
 		'MICBIAS1 PD MODE':1:1
+		'MICBIAS3 PD MODE':1:1
 		'SLIM TX7 MUX':0:DEC4
 		'DEC4 MUX':0:ADC3
 		'DEC4 Volume':1:67
 		'ADC3 Volume':1:50
-		'MICBIAS3 CAPLESS Switch':1:1
 	EndSequence
 
 	DisableSequence
@@ -5597,8 +5734,9 @@ SectionDevice
 		'SLIM TX7 MUX':0:ZERO
 		'SLIM TX8 MUX':0:ZERO
 		'MICBIAS1 CAPLESS Switch':1:0
-		'MICBIAS1 PD MODE':1:0
 		'MICBIAS3 CAPLESS Switch':1:0
+		'MICBIAS1 PD MODE':1:0
+		'MICBIAS3 PD MODE':1:0
 	EndSequence
 
 	ACDBID 508:2
@@ -6037,16 +6175,96 @@ SectionDevice
 		'DEC5 MUX':0:ADC2
 		'DEC5 Volume':1:73
 		'ADC2 Volume':1:100
+		'IIR1 INP1 MUX':0:DEC5
+		'RX1 MIX1 INP2':0:IIR1
+		'RX2 MIX1 INP2':0:IIR1
+		'IIR1 Band1':2:0x081263D9 0x36370119 0x02E784C0 0x0B5A1949 0x02D9D7F8
+		'IIR1 Band2':2:0x081263D9 0x3011E313 0x07DC1E52 0x214F1D29 0x0EBA79F9
+		'IIR1 Band3':2:0x081263D9 0x309F3C9A 0x07D215BF 0x2161F381 0x0F94E904
+		'IIR1 Band4':2:0x081263D9 0x33986476 0x05BA0150 0x21FEF9A6 0x0EB749DD
+		'IIR1 Band5':2:0x081263D9 0x3F902CB2 0x0004C555 0x2215801D 0x0E2DDC7B
+		'IIR1 Enable Band1':1:1
+		'IIR1 Enable Band2':1:1
+		'IIR1 Enable Band3':1:1
+		'IIR1 Enable Band4':1:1
+		'IIR1 Enable Band5':1:1
+		'IIR1 INP1 Volume':1:45
 	EndSequence
 
 	DisableSequence
 		'ADC2 Volume':1:0
 		'DEC5 Volume':1:0
+		'IIR1 INP1 Volume':1:0
 		'DEC5 MUX':0:ZERO
 		'SLIM TX7 MUX':0:ZERO
+		'RX1 MIX1 INP2' :0:ZERO
+		'RX2 MIX1 INP2':0:ZERO
+		'IIR1 Enable Band1':1:0
+		'IIR1 Enable Band2':1:0
+		'IIR1 Enable Band3':1:0
+		'IIR1 Enable Band4':1:0
+		'IIR1 Enable Band5':1:0
 	EndSequence
 
 	ACDBID 322:2
+
+EndSection
+
+SectionDevice
+	Name "Line Car Voice"
+	Comment "Speaker Tx device"
+
+	EnableSequence
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC4
+		'DEC4 MUX':0:ADC3
+		'DEC4 Volume':1:70
+		'ADC3 Volume':1:100
+		'MICBIAS3 CAPLESS Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'ADC3 Volume':1:0
+		'DEC4 Volume':1:0
+		'DEC4 MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+		'MICBIAS3 CAPLESS Switch':1:0
+	EndSequence
+
+	ACDBID 510:2
+
+EndSection
+
+SectionDevice
+	Name "Speaker Car Voice"
+	Comment "Speaker Rx device"
+
+	EnableSequence
+		'SLIM_0_RX Channels':0:One
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 DSM MUX':0:DSM_INV
+		'LINEOUT1 DAC Switch':1:1
+		'LINEOUT3 DAC Switch':1:1
+		'LINEOUT1 Volume':1:100
+		'LINEOUT3 Volume':1:100
+		'RX3 Digital Volume':1:70
+		'RX4 Digital Volume':1:70
+		'SPK AMP EN Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'SPK AMP EN Switch':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 DAC Switch':1:0
+		'LINEOUT3 DAC Switch':1:0
+		'RX4 DSM MUX':0:CIC_OUT
+		'RX3 MIX1 INP1':0:ZERO
+	EndSequence
+
+	ACDBID 610:1
 
 EndSection
 
@@ -6612,6 +6830,25 @@ SectionModifier
 EndSection
 
 SectionModifier
+	Name "Play MusicSpeaker Car Voice"
+	Comment "Modifier for music playback"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
 	Name "Play FM"
 
 	# ALSA PCMs
@@ -7064,6 +7301,27 @@ EndSection
 
 SectionModifier
 	Name "Play FMHeadphones Beats HW VOIP"
+
+	EnableSequence
+		'Internal FM RX Volume':1:0
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
+		'SLIMBUS_DL_HL Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
+		'SLIMBUS_DL_HL Switch':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 6
+	PlaybackPCM 5
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Play FMSpeaker Car Voice"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -7575,6 +7833,23 @@ EndSection
 
 SectionModifier
 	Name "Play LPAHeadphones Beats HW VOIP"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 4
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Play LPASpeaker Car Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -8178,6 +8453,24 @@ EndSection
 
 SectionModifier
 	Name "Capture MusicHeadset Beats HW VOIP"
+
+	EnableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia1 Mixer SLIM_0_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 0
+	PlaybackPCM 0
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Capture MusicLine Car Voice"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -9159,6 +9452,36 @@ SectionModifier
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
 		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 2
+	PlaybackPCM 2
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Play VoiceLine Car Voice"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer CSVoice':1:1
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 2
+	PlaybackPCM 2
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Play VoiceSpeaker Car Voice"
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer CSVoice':1:0
+		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
 	EndSequence
 
 	# ALSA PCMs
@@ -10465,6 +10788,36 @@ SectionVerb
 EndSection
 
 SectionModifier
+	Name "Play VOIPLine Car Voice"
+
+	EnableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:1
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 3
+	PlaybackPCM 3
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Play VOIPSpeaker Car Voice"
+
+	DisableSequence
+		'SLIM_0_RX_Voice Mixer Voip':1:0
+		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
+	EndSequence
+
+	# ALSA PCMs
+	CapturePCM 3
+	PlaybackPCM 3
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
 	Name "Play LPA Tunnel"
 
 	# ALSA PCMs
@@ -10938,6 +11291,23 @@ EndSection
 
 SectionModifier
 	Name "Play LPA TunnelHeadphones Beats HW VOIP"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionModifier
+	Name "Play LPA TunnelSpeaker Car Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
