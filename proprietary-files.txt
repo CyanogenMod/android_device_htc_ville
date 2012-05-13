@@ -6,6 +6,7 @@ bin/akmd
 bin/cand
 bin/charging
 bin/ewtzmud
+bin/hci_qcomm_init
 bin/mm-abl-daemon
 bin/mm-qcamera-daemon
 bin/mpdecision
