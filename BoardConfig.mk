@@ -74,6 +74,7 @@ BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
+TARGET_CUSTOM_BLUEDROID := ../../../device/htc/ville/bluetooth/bluetooth.c
 
 # Camera
 #BOARD_HAVE_HTC_FFC := true
