@@ -42,28 +42,8 @@
 #define MIN(x,y) (((x)<(y))?(x):(y))
 #define HCISMD_MOD_PARAM "/sys/module/hci_smd/parameters/hcismd_set"
 
-/*Variables to identify the transport using msm type*/
-static char transport_type[PROPERTY_VALUE_MAX];
-static int is_transportSMD = -1;
-
 static int rfkill_id = -1;
 static char *rfkill_state_path = NULL;
-
-static void get_hci_transport() {
-
-    int ret = -1;
-    ret = property_get("ro.qualcomm.bt.hci_transport", transport_type, NULL);
-    if(ret == 0)
-        LOGI("ro.qualcomm.bt.hci_transport not set\n");
-    else
-        LOGI("ro.qualcomm.bt.hci_transport %s \n", transport_type);
-
-    if (!strcasecmp(transport_type, "smd"))
-        is_transportSMD = 1;
-    else
-        is_transportSMD = 0;
-
-}
 
 static int init_rfkill() {
     char path[64];
@@ -197,18 +177,9 @@ int bt_enable() {
     int attempt;
     static int bt_on_once;
 
-    if(-1 == is_transportSMD)
-      get_hci_transport();
-
-    if (!is_transportSMD)
-        if (set_bluetooth_power(1) < 0)
-            goto out;
-
     LOGI("Starting hciattach daemon");
     if (property_set("ctl.start", "hciattach") < 0) {
         LOGE("Failed to start hciattach");
-        if (!is_transportSMD)
-            set_bluetooth_power(0);
         goto out;
     }
 
@@ -233,20 +204,12 @@ int bt_enable() {
     if (attempt == 0) {
         LOGE("%s: Timeout waiting for HCI device to come up, error- %d, ",
             __FUNCTION__, ret);
-        if (!is_transportSMD) {
-            if (property_set("ctl.stop", "hciattach") < 0) {
-                LOGE("Error stopping hciattach");
-            }
-            set_bluetooth_power(0);
-        }
         goto out;
     }
 
     LOGI("Starting bluetoothd deamon");
     if (property_set("ctl.start", "bluetoothd") < 0) {
         LOGE("Failed to start bluetoothd");
-        if (!is_transportSMD)
-            set_bluetooth_power(0);
         goto out;
     }
 
@@ -263,9 +226,6 @@ int bt_disable() {
     int ret = -1;
     int hci_sock = -1;
 
-    if (-1 == is_transportSMD)
-       get_hci_transport();
-
     LOGI("Stopping bluetoothd deamon");
     if (property_set("ctl.stop", "bluetoothd") < 0) {
         LOGE("Error stopping bluetoothd");
@@ -276,20 +236,8 @@ int bt_disable() {
     hci_sock = create_hci_sock();
     if (hci_sock < 0) goto out;
     ioctl(hci_sock, HCIDEVDOWN, HCI_DEV_ID);
-    if (!is_transportSMD) {
-        LOGI("Stopping hciattach deamon");
-        if (property_set("ctl.stop", "hciattach") < 0) {
-            LOGE("Error stopping hciattach");
-            goto out;
-        }
-    }
 
-    if (!is_transportSMD) {
-        if (set_bluetooth_power(0) < 0)
-            goto out;
-    } else {
-        set_hci_smd_transport(0);
-    }
+    set_hci_smd_transport(0);
 
     ret = 0;
 
@@ -304,16 +252,6 @@ int bt_is_enabled() {
     int hci_sock = -1;
     int ret = -1;
     struct hci_dev_info dev_info;
-
-    if (-1 == is_transportSMD)
-       get_hci_transport();
-
-    // Check power first
-    if (!is_transportSMD) {
-        ret = check_bluetooth_power();
-        if (ret == -1 || ret == 0) goto out;
-    }
-    ret = -1;
 
     // Power is on, now check if the HCI interface is up
     hci_sock = create_hci_sock();
