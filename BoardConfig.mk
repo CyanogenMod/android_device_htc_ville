@@ -74,7 +74,6 @@ BOARD_USES_ALSA_AUDIO := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
 
 # Camera
 #BOARD_HAVE_HTC_FFC := true
