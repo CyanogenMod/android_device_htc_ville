@@ -35,6 +35,7 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/configs/init.qcom.post_boot.sh:/system/etc/init.qcom.post_boot.sh \
     device/htc/ville/configs/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
     device/htc/ville/configs/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
+    device/htc/ville/configs/init.qcom.sdio.sh:/system/etc/init.qcom.sdio.sh \
     device/htc/ville/configs/init.qcom.wcnss_links.sh:/system/etc/init.qcom.wcnss_links.sh \
     device/htc/ville/configs/init.qcom.wifi.sh:/system/etc/init.qcom.wifi.sh
 
