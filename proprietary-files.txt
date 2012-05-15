@@ -18,6 +18,10 @@ bin/thermald
 bin/time_daemon
 bin/zchgd
 
+# Audio
+lib/libacdbloader.so
+lib/libaudcal.so
+
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
 lib/libchromatix_s5k3h2yx_hdr.so
