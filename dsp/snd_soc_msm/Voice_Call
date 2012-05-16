@@ -1,0 +1,11 @@
+# Voice Call (Voice call) use case config file for MSM8960
+
+SectionVerb
+	Name "Voice Call"
+
+	# ALSA PCMs
+	PlaybackPCM 2
+	capturePCM 2
+	ACDBID 0:0
+
+EndSection

@@ -1,0 +1,39 @@
+# Master file for snd_soc_msm sound card
+# File list all use case verbs
+SectionUseCase."HiFi" {
+File "HiFi"
+Comment "Music playback use case"
+}
+SectionUseCase."HiFi Low Power" {
+File "HiFi_Low_Power"
+Comment "LPA use case"
+}
+SectionUseCase."HiFi Low Power Tunnel" {
+File "HiFi_Low_Power"
+Comment "LPA use case"
+}
+SectionUseCase."HiFi Rec" {
+File "HiFi_Rec"
+Comment "Recording use case"
+}
+SectionUseCase."Voice Call" {
+File "Voice_Call"
+Comment "Voice Call use case"
+}
+SectionUseCase."Voice Call IP" {
+File "Voice_Call_IP"
+Comment "VOIP Call use case"
+}
+SectionUseCase."FM Digital Radio" {
+File "FM_Digital_Radio"
+Comment "FM Radio use case"
+}
+SectionUseCase."FM REC" {
+File "FM_REC"
+Comment "FM Recording use case"
+}
+SectionUseCase."FM A2DP REC" {
+File "FM_A2DP_REC"
+Comment "FM A2DP playback use case"
+}
+# End of master file

@@ -1,0 +1,19 @@
+# FM Recording use case config file for MSM8960
+
+SectionVerb
+	Name "FM A2DP REC"
+
+	EnableSequence
+		'MultiMedia2 Mixer INTERNAL_FM_TX':1:1
+	EndSequence
+
+	DisableSequence
+		'MultiMedia2 Mixer INTERNAL_FM_TX':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 1
+	capturePCM 1
+	ACDBID 0:0
+
+EndSection
