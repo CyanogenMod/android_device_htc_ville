@@ -16,6 +16,7 @@ Working:
 * Wifi
 
 Known issues:
+* Audio input fails to init unless audio playback occurs before it
 * Camera crashes when changing from front to main
 * Data state changes may not always acquire IP via DHCP
 * Wifi tethering does not work
