@@ -71,6 +71,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_HTC_MSM_SND := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true

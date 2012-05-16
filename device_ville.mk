@@ -73,26 +73,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg \
     device/htc/ville/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
-PRODUCT_COPY_FILES += \
-    device/htc/ville/dsp/snd_soc_msm/FM_A2DP_REC:/system/etc/snd_soc_msm/FM_A2DP_REC \
-    device/htc/ville/dsp/snd_soc_msm/FM_A2DP_REC_2x:/system/etc/snd_soc_msm/FM_A2DP_REC_2x \
-    device/htc/ville/dsp/snd_soc_msm/FM_Digital_Radio:/system/etc/snd_soc_msm/FM_Digital_Radio \
-    device/htc/ville/dsp/snd_soc_msm/FM_Digital_Radio_2x:/system/etc/snd_soc_msm/FM_Digital_Radio_2x \
-    device/htc/ville/dsp/snd_soc_msm/FM_REC:/system/etc/snd_soc_msm/FM_REC \
-    device/htc/ville/dsp/snd_soc_msm/FM_REC_2x:/system/etc/snd_soc_msm/FM_REC_2x \
-    device/htc/ville/dsp/snd_soc_msm/HiFi:/system/etc/snd_soc_msm/HiFi \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_2x:/system/etc/snd_soc_msm/HiFi_2x \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Low_Power:/system/etc/snd_soc_msm/HiFi_Low_Power \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Low_Power_2x:/system/etc/snd_soc_msm/HiFi_Low_Power_2x \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Rec:/system/etc/snd_soc_msm/HiFi_Rec \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Rec_2x:/system/etc/snd_soc_msm/HiFi_Rec_2x \
-    device/htc/ville/dsp/snd_soc_msm/snd_soc_msm:/system/etc/snd_soc_msm/snd_soc_msm \
-    device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call:/system/etc/snd_soc_msm/Voice_Call \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call_2x:/system/etc/snd_soc_msm/Voice_Call_2x \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call_IP:/system/etc/snd_soc_msm/Voice_Call_IP \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call_IP_2x:/system/etc/snd_soc_msm/Voice_Call_IP_2x
-
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/ville/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
@@ -117,6 +97,27 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8960 \
     libalsa-intf \
     libaudioutils
+
+# Audio configs
+PRODUCT_PACKAGES += \
+    FM_A2DP_REC \
+    FM_A2DP_REC_2x \
+    FM_Digital_Radio \
+    FM_Digital_Radio_2x \
+    FM_REC \
+    FM_REC_2x \
+    HiFi \
+    HiFi_2x \
+    HiFi_Low_Power \
+    HiFi_Low_Power_2x \
+    HiFi_Rec \
+    HiFi_Rec_2x \
+    snd_soc_msm \
+    snd_soc_msm_2x \
+    Voice_Call \
+    Voice_Call_2x \
+    Voice_Call_IP \
+    Voice_Call_Ip_2x
 
 # Graphics
 PRODUCT_PACKAGES += \
