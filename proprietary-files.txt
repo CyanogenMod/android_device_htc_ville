@@ -32,6 +32,7 @@ lib/hw/camera.msm8960.so
 lib/libcamera_client.so
 lib/libcameraface.so
 lib/libcamerapp.so
+lib/libcameraservice.so
 lib/libDxOAF.so
 lib/libgemini.so
 lib/libmmcamera_frameproc.so
