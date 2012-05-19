@@ -149,6 +149,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hdmid
 
+# Torch
+PRODUCT_PACKAGES += \
+		Torch
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
