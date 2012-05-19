@@ -266,7 +266,6 @@ service qmuxd /system/bin/qmuxd
 service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_config
     class core
     user root
-    disabled
 
 service thermald /system/bin/thermald
     user root
@@ -307,9 +306,6 @@ on property:persist.thermal.monitor=true
 
 on property:persist.timed.enable=true
     start time_daemon
-
-on property:ro.emmc=1
-    start rmt_storage
 
 on property:ro.hdmi.enable=true
     start hdmid
