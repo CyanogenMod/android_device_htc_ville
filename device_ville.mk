@@ -63,6 +63,10 @@ PRODUCT_COPY_FILES += device/htc/ville/configs/thermald.conf:system/etc/thermald
 PRODUCT_COPY_FILES += \
     device/htc/ville/configs/vold.fstab:system/etc/vold.fstab
 
+# wifi config
+PRODUCT_COPY_FILES += \
+    device/htc/ville/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
