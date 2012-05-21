@@ -15,6 +15,9 @@ rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.baseband.arch=msm
 
+# audio
+lpa.decode=true
+
 # graphics
 debug.composition.type=dyn
 debug.enabletr=true
