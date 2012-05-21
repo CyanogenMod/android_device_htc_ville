@@ -29,6 +29,7 @@ com.qc.hdmi_out=true
 dev.pm.dyn_samplingrate=1
 
 # wifi
+ro.product.wireless=WCN3660
 wifi.interface=wlan0
 
 # data module
