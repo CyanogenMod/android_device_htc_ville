@@ -104,10 +104,9 @@ static void set_speaker_light_locked(struct light_device_t *dev,
   unsigned int color = LED_BLANK;
   unsigned int blinkMode = BLINK_MODE_NORMAL;
 
-  if ((colorRGB >> 8) & 0xFF)
-    color = LED_GREEN;
-  if (((colorRGB >> 16) & 0xFF) > ((colorRGB >> 8) & 0xFF))
-    color = LED_AMBER;
+  if ((colorRGB >> 8) & 0xFF) color = LED_GREEN;
+  if ((colorRGB >> 16) & 0xFF) color = LED_AMBER;
+  if (((colorRGB >> 8) & 0xFF) > ((colorRGB >> 16) & 0xFF)) color = LED_GREEN;
 
   switch (state->flashOnMS) {
     case PULSE_LENGTH_VERY_SHORT:
