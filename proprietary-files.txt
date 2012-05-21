@@ -62,9 +62,6 @@ lib/libloc_api_v02.so
 lib/libloc_eng.so
 lib/libloc_ext.so
 
-# Lights
-lib/hw/lights.msm8960.so
-
 # Misc libraries
 lib/libgsl.so
 lib/libmm-color-convertor.so
