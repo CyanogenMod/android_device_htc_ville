@@ -62,10 +62,11 @@ enum {
 };
 
 enum {
-  BLINK_MODE_VERY_SHORT = 1,
-  BLINK_MODE_SHORT = 2,
-  BLINK_MODE_NORMAL= 3,
-  BLINK_MODE_LONG= 4,
+  BLINK_MODE_OFF,
+  BLINK_MODE_VERY_SHORT,
+  BLINK_MODE_SHORT,
+  BLINK_MODE_NORMAL,
+  BLINK_MODE_LONG,
 };
 
 static int write_int(const char* path, int value) {
@@ -102,7 +103,7 @@ static void set_speaker_light_locked(struct light_device_t *dev,
                                      struct light_state_t *state) {
   unsigned int colorRGB = state->color & 0xFFFFFF;
   unsigned int color = LED_BLANK;
-  unsigned int blinkMode = BLINK_MODE_NORMAL;
+  unsigned int blinkMode = BLINK_MODE_OFF;
 
   if ((colorRGB >> 8) & 0xFF) color = LED_GREEN;
   if ((colorRGB >> 16) & 0xFF) color = LED_AMBER;
