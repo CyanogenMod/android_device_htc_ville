@@ -101,6 +101,9 @@ TARGET_USES_ION := true
 TARGET_QCOM_HDMI_OUT := true
 BOARD_EGL_CFG := device/htc/ville/configs/egl.cfg
 
+# Lights
+TARGET_PROVIDES_LIBLIGHTS := true
+
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
