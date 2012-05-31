@@ -38,9 +38,6 @@ loglevel 3
     mount cgroup none /acct cpuacct
     mkdir /acct/uid
 
-    mkdir /system
-    mkdir /data 0771 system system
-    mkdir /cache 0771 system cache
     mkdir /config 0500 root root
 
     # Directory for putting things only root should see.

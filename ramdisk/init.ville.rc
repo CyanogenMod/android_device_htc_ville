@@ -9,7 +9,7 @@ on early-init
 on emmc
     mkdir /system
     mkdir /data 0771 system system
-    mkdir /cache 0770 system cache
+    mkdir /cache 0771 system cache
     mkdir /devlog 0700 root root
 
     mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
