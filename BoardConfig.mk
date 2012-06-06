@@ -101,9 +101,6 @@ TARGET_PROVIDES_LIBLIGHTS := true
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
-# USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
-
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
