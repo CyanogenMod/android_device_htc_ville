@@ -230,6 +230,12 @@ service hdmid /system/bin/hdmid
     socket hdmid stream 0660 root system graphics
     disabled
 
+service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
+    user root
+    group root
+    oneshot
+    disabled
+
 service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
