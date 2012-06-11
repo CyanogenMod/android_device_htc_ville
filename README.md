@@ -4,7 +4,7 @@ android_device_htc_ville
 Android device tree for HTC Ville (One S)
 
 Build requirements:
-* framework/base, branch ics-ville
+* device/htc/msm8960-common, branch ics
 * hardware/alsa_sound, branch ics-chocolate
 * vendor/qcom/opensource/kernel-tests/libalsa-intf, branch ics-chocolate
 
