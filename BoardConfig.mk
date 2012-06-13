@@ -40,6 +40,9 @@ TARGET_PREBUILT_KERNEL := device/htc/ville/prebuilt/kernel
 TARGET_KERNEL_CONFIG := ville_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
+# Preload bootanimation
+TARGET_BOOTANIMATION_PRELOAD := true
+
 # QCOM GPS
 #BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 #BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := ville
