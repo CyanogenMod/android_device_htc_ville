@@ -33,6 +33,7 @@ lib/libcamera_client.so
 lib/libcameraface.so
 lib/libcamerapp.so
 lib/libcameraservice.so
+lib/libcam_oem_plugin.so
 lib/libDxOAF.so
 lib/libgemini.so
 lib/libmmcamera_frameproc.so
