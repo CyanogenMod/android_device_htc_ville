@@ -134,8 +134,6 @@ on boot
     chmod 0660 /dev/ttyGS0
     chown system system /dev/ttyGS0
 
-    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
-
     # symlink for HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
 
