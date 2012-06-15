@@ -45,22 +45,6 @@ on init
     chown root root /devlog
     chmod 0700 /devlog
 
-    # sensors
-    chown compass system /dev/akm8975_aot
-    chown compass system /dev/akm8975_daemon
-    chown compass system /dev/bma150
-    chmod 0640 /dev/akm8975_aot
-    chmod 0640 /dev/akm8975_daemon
-    chmod 0640 /dev/bma150
-
-    chown system system /dev/ewtzmu2daemon
-    chown system system /dev/ewtzmu2hal
-    chown system system /dev/ewtzmu2
-    chmod 0640 /dev/ewtzmu2daemon
-    chmod 0640 /dev/ewtzmu2hal
-    chmod 0640 /dev/ewtzmu2
-
-
 on boot
     # bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
@@ -74,16 +58,11 @@ on boot
     chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /proc/bluetooth/sleep/proto
-    chown bluetooth bluetooth /dev/ttyHS0
-    chmod 0660 /dev/ttyHS0
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
     # for modem link
     chown system system /sys/module/serial/parameters/modem_enabled
-    chown system system /dev/ttyHSUSB0
-    chown system system /dev/ttySA0
-    chown system system /dev/smd9
 
     # wifi
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -109,30 +88,11 @@ on boot
     chown system system /sys/class/leds/flashlight/brightness
     chmod 0666          /sys/class/leds/flashlight/brightness
 
-    # set diag permissions
-    chown radio radio /dev/diag
-    chown radio radio /dev/diag_mdm
-    chown radio radio /dev/htcdiag
-    chown radio radio /dev/diag_arm9
-    chown radio radio /dev/btdiag
-    chmod 0660 /dev/diag
-    chmod 0660 /dev/diag_mdm
-    chmod 0660 /dev/htcdiag
-    chmod 0660 /dev/diag_arm9
-    chmod 0660 /dev/btdiag
-
     # Chown polling nodes as needed from UI running on system server
     chown system system /persist
     chmod 0771 /persist
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chown system system /sys/devices/platform/msm_sdcc.1/polling
-
-    # port-bridge
-    chmod 0660 /dev/smd0
-    chown system system /dev/smd0
-
-    chmod 0660 /dev/ttyGS0
-    chown system system /dev/ttyGS0
 
     # symlink for HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
@@ -148,10 +108,6 @@ on boot
 
     # radio
     mkdir /data/radio 0770 radio radio
-
-    # for simlock
-    chown radio radio /dev/simlock
-    chmod 0660 /dev/simlock
 
     # allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2

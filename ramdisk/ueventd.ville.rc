@@ -1,17 +1,21 @@
 /dev/rtc0                 0600   system     system
 
-# the DIAG device node is world writable/readable.
-/dev/diag                 0666   root       root
+# HTC diag
+/dev/btdiag               0660   radio      radio
+/dev/diag                 0660   radio      radio
+/dev/diag_arm9            0660   radio      radio
+/dev/diag_mdm             0660   radio      radio
+/dev/htcdiag              0660   radio      radio
 
 # the genlock client device node is world writable/readable.
-/dev/genlock              0666   root      root
+/dev/genlock              0666   root       root
 
 # gpu driver for adreno200 is globally accessible
 /dev/kgsl-3d0             0666   root       root
 /dev/kgsl-2d0             0666   root       root
 /dev/kgsl-2d1             0666   root       root
 
-/dev/ttyHS0               0600   bluetooth  bluetooth
+/dev/ttyHS0               0660   bluetooth  bluetooth
 /dev/ttyGS0               0660   system     system
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/msm_rotator          0660   system     graphics
@@ -28,6 +32,8 @@
 /dev/tzcom                0660   system     audio
 /dev/qce                  0660   system     audio
 /dev/msm_pcm_lp_dec       0660   system     audio
+# HTC
+/dev/smd0                 0660   system     system
 /dev/smd4                 0660   system     system
 /dev/smd3                 0660   bluetooth      bluetooth
 /dev/smd2                 0660   bluetooth      bluetooth
@@ -95,6 +101,17 @@
 /dev/msm_preproc_ctl      0660  system       audio
 /dev/msm_a2dp_in          0640  system       audio
 /dev/msm_amrnb_in         0640  system       audio
+
+# for ville sensors
+/dev/akm8975_aot          0640  compass      system
+/dev/akm8975_daemon       0640  compass      system
+/dev/bma150               0640  compass      system
+/dev/ewtzmu2daemon        0640  system       system
+/dev/ewtzmu2hal           0640  system       system
+/dev/ewtzmu2              0640  system       system
+
+# for simlock
+/dev/simlock              0660  radio        radio
 
 # sysfs properties
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
