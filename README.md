@@ -5,8 +5,6 @@ Android device tree for HTC Ville (One S)
 
 Build requirements:
 * device/htc/msm8960-common, branch ics
-* hardware/alsa_sound, branch ics-chocolate
-* vendor/qcom/opensource/kernel-tests/libalsa-intf, branch ics-chocolate
 
 Working:
 * Bluetooth
@@ -19,4 +17,3 @@ Known issues:
 * LPA volume is ridiculously high
 * Wifi tethering does not work
 * Wifi calling not available
-* Camcorder does not initialize properly
