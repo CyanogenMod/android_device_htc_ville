@@ -15,5 +15,4 @@ Working:
 
 Known issues:
 * LPA volume is ridiculously high
-* Wifi tethering does not work
 * Wifi calling not available
