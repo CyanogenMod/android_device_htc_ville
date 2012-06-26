@@ -97,9 +97,6 @@ on boot
     # symlink for HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
 
-    # for netmgr daemon to inform the USB driver of the correct transport
-    chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
-
     # create folder for time-services
     mkdir /data/time 0700 system system
 
