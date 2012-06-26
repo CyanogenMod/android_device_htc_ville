@@ -6,18 +6,6 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-on emmc
-    mkdir /system
-    mkdir /data 0771 system system
-    mkdir /cache 0771 system cache
-    mkdir /devlog 0700 root root
-
-    mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p35 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p34 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
-
-on emmc-fs
     # msm8960 firmware
     #mkdir /firmware_dsps 0771 system system
     mkdir /firmware_q6 0771 system system
@@ -34,18 +22,48 @@ on emmc-fs
     mount vfat /dev/block/mmcblk0p18 /firmware_q6 ro shortname=lower
     mount vfat /dev/block/mmcblk0p19 /firmware_wcnss ro shortname=lower
 
+on early-fs
+    mkdir /system
+    mkdir /data 0771 system system
+    mkdir /cache 0771 system cache
+    mkdir /devlog 0700 root root
+
+    mount ext4 /dev/block/mmcblk0p33 /system wait ro data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p35 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p34 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
+
     # use qcom link scripts for firmware links
     #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
     exec /system/bin/sh /system/etc/init.qcom.q6_links.sh
     exec /system/bin/sh /system/etc/init.qcom.radio_links.sh
     exec /system/bin/sh /system/etc/init.qcom.wcnss_links.sh
 
-on init
+on post-fs-data
     # double check perms and set owner
     chown root root /devlog
     chmod 0700 /devlog
 
-on boot
+    remount rootfs rootfs / remount
+
+    # wifi
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
+    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+
+    # audio
+    mkdir /data/audio 0775 media audio
+
+    # radio
+    mkdir /data/radio 0770 radio radio
+
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_done 1
+
+on init
     # bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -63,14 +81,6 @@ on boot
 
     # for modem link
     chown system system /sys/module/serial/parameters/modem_enabled
-
-    # wifi
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
 
     # create symlink to qcn wpa_supplicant folder
     symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
@@ -100,12 +110,14 @@ on boot
     # create folder for time-services
     mkdir /data/time 0700 system system
 
-    # audio
-    mkdir /data/audio 0775 media audio
+    # low charge current in voice call
+    chown radio radio /sys/class/power_supply/battery/phone_call
+    chown radio radio /sys/class/power_supply/battery/network_search
 
-    # radio
-    mkdir /data/radio 0770 radio radio
+    # for slate charging timer
+    chown radio /sys/class/power_supply/battery/charger_timer
 
+on boot
     # allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
@@ -134,13 +146,6 @@ on boot
 
     # load kineto_gan.ko
     insmod /system/lib/modules/kineto_gan.ko
-
-    # low charge current in voice call
-    chown radio radio /sys/class/power_supply/battery/phone_call
-    chown radio radio /sys/class/power_supply/battery/network_search
-
-    # for slate charging timer
-    chown radio /sys/class/power_supply/battery/charger_timer
 
     # cyttsp update
     write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
