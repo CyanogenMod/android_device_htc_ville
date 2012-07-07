@@ -1,0 +1,4 @@
+<resources>
+  <!-- Disable face detection on the front camera-->
+  <bool name="noFaceDetectOnFrontCamera">true</bool>
+</resources>
