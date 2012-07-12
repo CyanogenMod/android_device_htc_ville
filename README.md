@@ -14,5 +14,4 @@ Working:
 * Wifi
 
 Known issues:
-* LPA volume is ridiculously high
 * Wifi calling not available
