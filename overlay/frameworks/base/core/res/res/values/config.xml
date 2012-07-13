@@ -44,7 +44,7 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Needed for capacitive buttons to work without toggling auto-brightness. -->
-    <bool name="config_autoBrightnessButtonKeyboard">false</bool>
+    <!-- <bool name="config_autoBrightnessButtonKeyboard">false</bool> -->
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
@@ -191,5 +191,5 @@
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- We dont have different firmware for wifi modes, prevent reloading it -->
-    <bool name="config_wifi_ap_firmware_reload">false</bool>
+    <!-- <bool name="config_wifi_ap_firmware_reload">false</bool> -->
 </resources>
