@@ -1,10 +1,14 @@
 import init.ville.usb.rc
 
 on early-init
-    export EXTERNAL_STORAGE /mnt/sdcard
-    mkdir /mnt/sdcard 0000 system system
+    mkdir /storage 0050 system sdcard_r
+    mkdir /storage/sdcard0 0000 system system
+
     # for backwards compatibility
-    symlink /mnt/sdcard /sdcard
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+
+    export EXTERNAL_STORAGE /storage/sdcard0
 
     # msm8960 firmware
     #mkdir /firmware_dsps 0771 system system
