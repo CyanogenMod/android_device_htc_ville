@@ -24,6 +24,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/ville/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
+    device/htc/ville/ramdisk/fstab.ville:root/fstab.ville \
     device/htc/ville/ramdisk/init.ville.rc:root/init.ville.rc \
     device/htc/ville/ramdisk/init.ville.usb.rc:root/init.ville.usb.rc \
     device/htc/ville/ramdisk/ueventd.ville.rc:root/ueventd.ville.rc
