@@ -3,6 +3,7 @@ etc/agps_rm
 
 # Executable files
 bin/akmd
+bin/awb_camera
 bin/cand
 bin/charging
 bin/ewtzmud
