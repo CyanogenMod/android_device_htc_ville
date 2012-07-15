@@ -88,6 +88,7 @@ lib/libnetmgr.so
 lib/libqc-opt.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
+lib/libril.so
 
 # Sensors
 lib/hw/sensors.ville.so
