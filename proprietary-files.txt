@@ -30,10 +30,8 @@ lib/libchromatix_s5k3h2yx_hfr.so
 lib/libchromatix_s5k3h2yx_preview.so
 lib/libchromatix_s5k3h2yx_zsl.so
 lib/hw/camera.msm8960.so
-lib/libcamera_client.so
 lib/libcameraface.so
 lib/libcamerapp.so
-lib/libcameraservice.so
 lib/libcam_oem_plugin.so
 lib/libDxOAF.so
 lib/libgemini.so
