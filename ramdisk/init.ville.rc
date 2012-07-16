@@ -190,11 +190,6 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service kick_rild /system/xbin/killall -9 rild
-    class late_start
-    user root
-    oneshot
-
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     user root
     disabled
