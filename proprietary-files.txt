@@ -22,6 +22,7 @@ bin/zchgd
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libwvm.so
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
