@@ -47,9 +47,6 @@ TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
 # Wifi
 WIFI_DRIVER_MODULE_NAME          := prima_wlan
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
