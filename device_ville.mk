@@ -69,24 +69,8 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
-    device/htc/ville/dsp/snd_soc_msm/FM_A2DP_REC:/system/etc/snd_soc_msm/FM_A2DP_REC \
-    device/htc/ville/dsp/snd_soc_msm/FM_A2DP_REC_2x:/system/etc/snd_soc_msm/FM_A2DP_REC_2x \
-    device/htc/ville/dsp/snd_soc_msm/FM_Digital_Radio:/system/etc/snd_soc_msm/FM_Digital_Radio \
-    device/htc/ville/dsp/snd_soc_msm/FM_Digital_Radio_2x:/system/etc/snd_soc_msm/FM_Digital_Radio_2x \
-    device/htc/ville/dsp/snd_soc_msm/FM_REC:/system/etc/snd_soc_msm/FM_REC \
-    device/htc/ville/dsp/snd_soc_msm/FM_REC_2x:/system/etc/snd_soc_msm/FM_REC_2x \
-    device/htc/ville/dsp/snd_soc_msm/HiFi:/system/etc/snd_soc_msm/HiFi \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_2x:/system/etc/snd_soc_msm/HiFi_2x \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Low_Power:/system/etc/snd_soc_msm/HiFi_Low_Power \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Low_Power_2x:/system/etc/snd_soc_msm/HiFi_Low_Power_2x \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Rec:/system/etc/snd_soc_msm/HiFi_Rec \
-    device/htc/ville/dsp/snd_soc_msm/HiFi_Rec_2x:/system/etc/snd_soc_msm/HiFi_Rec_2x \
     device/htc/ville/dsp/snd_soc_msm/snd_soc_msm:/system/etc/snd_soc_msm/snd_soc_msm \
-    device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call:/system/etc/snd_soc_msm/Voice_Call \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call_2x:/system/etc/snd_soc_msm/Voice_Call_2x \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call_IP:/system/etc/snd_soc_msm/Voice_Call_IP \
-    device/htc/ville/dsp/snd_soc_msm/Voice_Call_IP_2x:/system/etc/snd_soc_msm/Voice_Call_IP_2x
+    device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
