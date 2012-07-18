@@ -101,8 +101,8 @@ PRODUCT_PACKAGES += \
     Torch
 
 # Kernel modules
-#PRODUCT_COPY_FILES += \
-#    device/htc/ville/modules/prima_wlan.ko:/system/lib/modules/prima_wlan.ko
+PRODUCT_COPY_FILES += \
+    device/htc/ville/modules/prima_wlan.ko:/system/lib/modules/prima_wlan.ko
 
 # Permissions
 PRODUCT_COPY_FILES += \
