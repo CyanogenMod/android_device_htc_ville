@@ -232,6 +232,13 @@ service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c/data/misc
     disabled
     oneshot
 
+service p2p_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf
+    user root
+    group wifi inet
+    socket wpa_wlan0 dgram 0660 wifi wifi
+    disabled
+    oneshot
+
 service zchgd_offmode /system/bin/zchgd -pseudooffmode
     user root
     group root graphics
