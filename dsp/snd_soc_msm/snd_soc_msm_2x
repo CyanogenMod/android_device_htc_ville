@@ -1,5 +1,7 @@
 #XD_HiFi_Merge_2x_ville_20120330
 
+SectionUseCase."HiFi" {
+Comment "Music playback use case"
 SectionVerb
 	Name "HiFi"
 
@@ -551,7 +553,10 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
+}
 
+SectionUseCase."HiFi Low Power" {
+Comment "LPA use case"
 SectionVerb
 	Name "HiFi Low Power"
 
@@ -1021,7 +1026,482 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
-	
+}
+
+SectionUseCase."HiFi Low Power Tunnel" {
+SectionVerb
+	Name "HiFi Low Power Tunnel"
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelEarpiece"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphones"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker ANC Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelANC Headset"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker Car Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker FM Tx"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelBT SCO Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelBT SCO WB Rx"
+
+	EnableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHDMI"
+
+	EnableSequence
+		'HDMI Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'HDMI Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelFM Tx"
+
+	EnableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphone Beats"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker VZWUSB"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphones FM"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker FM"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelEarpiece Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphones Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphones Beats Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelEarpiece HAC Voice"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker Stereo External"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelMOS Headphones RX"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelEarpiece HW VOIP"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelSpeaker HW VOIP"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphones HW VOIP"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+
+SectionVerb
+	Name "HiFi Low Power TunnelHeadphones Beats HW VOIP"
+
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
+	EndSequence
+
+	# ALSA PCMs
+	PlaybackPCM 9
+	ACDBID 0:0
+
+EndSection
+}
+
+SectionUseCase."HiFi Rec" {
+Comment "Recording use case"
 SectionVerb
 	Name "HiFi Rec"
 
@@ -1643,7 +2123,10 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
+}
 
+SectionUseCase."Voice Call" {
+Comment "Voice Call use case"
 SectionVerb
 	Name "Voice Call"
 
@@ -2647,7 +3130,9 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
+}
 
+SectionUseCase."Voice Call IP" {
 SectionVerb
 	Name "Voice Call IP"
 
@@ -3758,7 +4243,10 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
+}
 
+SectionUseCase."FM Digital Radio" {
+Comment "FM Radio use case"
 SectionVerb
 	Name "FM Digital RadioEarpiece"
 
@@ -4241,7 +4729,10 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
+}
 
+SectionUseCase."FM Rec" {
+Comment "FM Recording use case"
 SectionVerb
 	Name "FM REC"
 
@@ -4259,7 +4750,10 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
+}
 
+SectionUseCase."FM A2DP REC" {
+Comment "FM A2DP playback use case"
 SectionVerb
 	Name "FM A2DP REC"
 
@@ -4277,23 +4771,7 @@ SectionVerb
 	ACDBID 0:0
 
 EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker Car Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
+}
 
 SectionDevice
 	Name "Earpiece"
@@ -10334,458 +10812,7 @@ SectionModifier
 
 EndSection
 
-SectionVerb
-	Name "HiFi Low Power Tunnel"
 
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelEarpiece"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker Headset"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker ANC Headset"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelANC Headset"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker FM Tx"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelBT SCO Rx"
-
-	EnableSequence
-		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelBT SCO WB Rx"
-
-	EnableSequence
-		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_BT_SCO_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHDMI"
-
-	EnableSequence
-		'HDMI Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'HDMI Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelFM Tx"
-
-	EnableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'INTERNAL_FM_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphone Beats"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker VZWUSB"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones FM"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker FM"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelEarpiece Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones Beats Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelEarpiece HAC Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker Stereo External"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelMOS Headphones RX"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelEarpiece HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones Beats HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
 
 SectionModifier
 	Name "Play VOIPLine Car Voice"
