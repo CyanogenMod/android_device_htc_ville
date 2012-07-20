@@ -23,6 +23,7 @@ bin/zchgd
 lib/libacdbloader.so
 lib/libaudcal.so
 lib/libwvm.so
+lib/libWVStreamControlAPI_L3.so
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
