@@ -274,3 +274,8 @@ on property:ro.qualcomm.cabl=0
 
 on property:ro.use_data_netmgrd=false
     stop netmgrd
+
+on property:service.adb.root=1
+    write /sys/class/android_usb/android0/enable 0
+    restart adbd
+    write /sys/class/android_usb/android0/enable 1
