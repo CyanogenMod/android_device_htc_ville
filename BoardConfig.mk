@@ -38,7 +38,6 @@ BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 
 TARGET_PREBUILT_KERNEL := device/htc/ville/prebuilt/kernel
 TARGET_KERNEL_CONFIG := ville_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # ICS Compat things
 BOARD_NEEDS_MEMORYHEAPPMEM := true
