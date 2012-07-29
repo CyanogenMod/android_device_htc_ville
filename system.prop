@@ -15,7 +15,7 @@ ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.baseband.arch=msm
 
 # audio
-lpa.decode=true
+#lpa.decode=true
 
 # graphics
 debug.composition.type=dyn
