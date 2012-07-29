@@ -15,7 +15,7 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
   if [ ! -d $BASE/$DIR ]; then
     mkdir -p $BASE/$DIR
   fi
-  unzip -j -o ${UPDATE_PACKAGE} system/$FILE -d $BASE/$DIR
+  unzip -j -o ${UPDATE_PACKAGE} system/$FILE -d $BASE/$DIR || exit 1
 done
 
 ./setup-makefiles.sh
