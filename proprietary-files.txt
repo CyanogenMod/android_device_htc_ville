@@ -63,11 +63,16 @@ lib/libloc_api_v02.so
 lib/libloc_eng.so
 lib/libloc_ext.so
 
-# Misc libraries
+# Media libraries
+lib/libmmosal.so
 lib/libmm-color-convertor.so
-lib/libOpenVG.so
+lib/libmmparser.so
+lib/libmmparser_divxdrmlib.so
 lib/libwvm.so
 lib/libWVStreamControlAPI_L3.so
+
+# Misc libraries
+lib/libOpenVG.so
 
 # Qualcomm/HTC common libs
 lib/libdiag.so
