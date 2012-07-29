@@ -47,9 +47,6 @@ persist.gps.qmienabled=true
 # enable time services
 persist.timed.enable=true
 
-# System property for cabl
-ro.qualcomm.cabl=0
-
 # System property for thermald
 persist.thermal.monitor=true
 
