@@ -16,7 +16,6 @@ bin/netsharing
 bin/rmt_storage
 bin/qmuxd
 bin/thermald
-bin/time_daemon
 bin/zchgd
 
 # Audio
