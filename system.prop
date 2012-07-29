@@ -25,7 +25,6 @@ ro.opengles.version=131072
 ro.sf.compbypass.enable=1
 
 com.qc.hardware=true
-com.qc.hdmi_out=true
 
 # qcom cpu governor service
 dev.pm.dyn_samplingrate=1
