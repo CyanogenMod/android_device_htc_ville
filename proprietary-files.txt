@@ -51,7 +51,9 @@ lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
 lib/libC2D2.so
+lib/libc2d2_z180.so
 lib/libgsl.so
+lib/libOpenVG.so
 lib/libsc-a2xx.so
 
 # GPS
@@ -70,9 +72,6 @@ lib/libmmparser.so
 lib/libmmparser_divxdrmlib.so
 lib/libwvm.so
 lib/libWVStreamControlAPI_L3.so
-
-# Misc libraries
-lib/libOpenVG.so
 
 # Qualcomm/HTC common libs
 lib/libdiag.so
