@@ -3,12 +3,8 @@ android_device_htc_ville
 
 Android device tree for HTC Ville (One S) - Jellybean Branch
 
-Working:
-* Radio 2012-07-17
-* Wifi  2012-07-19
-
 Known issues:
+* Video Camera not working
+* Front Camera not switching properly
+* GPS spam causes high battery drain
 * Wifi calling not available
-* Sound
-* Camera
-* Bluetooth
