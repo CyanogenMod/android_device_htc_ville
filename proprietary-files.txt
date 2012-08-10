@@ -95,6 +95,3 @@ lib/libril-qcril-hook-oem.so
 
 # Sensors
 lib/hw/sensors.ville.so
-
-# Webkit
-lib/libv8.so
