@@ -70,8 +70,6 @@ lib/libmmosal.so
 lib/libmm-color-convertor.so
 lib/libmmparser.so
 lib/libmmparser_divxdrmlib.so
-lib/libwvm.so
-lib/libWVStreamControlAPI_L3.so
 
 # Misc libraries
 lib/libOpenVG.so
