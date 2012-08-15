@@ -39,11 +39,6 @@ PRODUCT_COPY_FILES += \
 # GPS config
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
-# Media config
-PRODUCT_COPY_FILES += \
-    device/htc/msm8960-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/msm8960-common/configs/media_codecs.xml:system/etc/media_codecs.xml
-
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/ville/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
