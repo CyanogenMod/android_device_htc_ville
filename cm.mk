@@ -4,8 +4,6 @@ $(call inherit-product, vendor/cm/config/gsm.mk)
 # Release name
 PRODUCT_RELEASE_NAME := ville
 
-TARGET_BOOTANIMATION_NAME := vertical-540x960
-
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
