@@ -2,7 +2,6 @@
 
 # HTC diag
 /dev/btdiag               0660   radio      radio
-/dev/diag                 0660   radio      radio
 /dev/diag_arm9            0660   radio      radio
 /dev/diag_mdm             0660   radio      radio
 /dev/htcdiag              0660   radio      radio
