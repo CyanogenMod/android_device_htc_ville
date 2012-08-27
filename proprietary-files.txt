@@ -69,9 +69,6 @@ lib/libmm-color-convertor.so
 lib/libmmparser.so
 lib/libmmparser_divxdrmlib.so
 
-# Misc libraries
-lib/libOpenVG.so
-
 # Qualcomm/HTC common libs
 lib/libdiag.so
 lib/libdsi_netctrl.so
