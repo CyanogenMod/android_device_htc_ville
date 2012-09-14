@@ -47,6 +47,9 @@ on post-fs-data
     write /dev/wcnss_wlan 1
 
 on boot
+    # mount debugfs for systrace
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
     # Chown polling nodes as needed from UI running on system server
     chown system system /persist
     chmod 0771 /persist
