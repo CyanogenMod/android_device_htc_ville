@@ -89,3 +89,14 @@ lib/libril-qcril-hook-oem.so
 
 # Sensors
 lib/hw/sensors.ville.so
+
+# WLAN
+etc/firmware/wlan/prima/WCNSS_cfg.dat
+etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+etc/firmware/wcnss/wcnss.b00
+etc/firmware/wcnss/wcnss.b01
+etc/firmware/wcnss/wcnss.b02
+etc/firmware/wcnss/wcnss.b04
+etc/firmware/wcnss/wcnss.mdt
+lib/modules/prima_wlan.ko
