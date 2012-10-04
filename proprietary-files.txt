@@ -99,4 +99,3 @@ etc/firmware/wcnss.b01
 etc/firmware/wcnss.b02
 etc/firmware/wcnss.b04
 etc/firmware/wcnss.mdt
-lib/modules/prima_wlan.ko
