@@ -16,21 +16,10 @@ on init
 on emmc-fs
     # msm8960 firmware partitions
     mkdir /tombstones 0771 system system
-    mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
-    mkdir /tombstones/wcnss 0771 system system
-    mkdir /tombstones/dsps 0771 system system
-    mkdir /firmware_radio 0771 system system
-    mkdir /firmware_q6 0771 system system
-    mkdir /firmware_dsps 0771 system system
 
     # mount all mmc partitions
     mount_all /fstab.ville
-
-    # use qcom link scripts for firmware links
-    #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
-    exec /system/bin/sh /system/etc/init.qcom.q6_links.sh
-    exec /system/bin/sh /system/etc/init.qcom.radio_links.sh
 
 on post-fs-data
     # double check perms and set owner
