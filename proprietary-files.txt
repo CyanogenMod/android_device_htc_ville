@@ -67,6 +67,45 @@ lib/libmmparser_divxdrmlib.so
 lib/libwvm.so
 lib/libWVStreamControlAPI_L3.so
 
+# Modem firmware
+etc/firmware/modem.b00
+etc/firmware/modem.b01
+etc/firmware/modem.b02
+etc/firmware/modem.b03
+etc/firmware/modem.b04
+etc/firmware/modem.b06
+etc/firmware/modem.b07
+etc/firmware/modem.mdt
+etc/firmware/modem_fw.b00
+etc/firmware/modem_fw.b01
+etc/firmware/modem_fw.b02
+etc/firmware/modem_fw.b03
+etc/firmware/modem_fw.b04
+etc/firmware/modem_fw.b05
+etc/firmware/modem_fw.b06
+etc/firmware/modem_fw.b07
+etc/firmware/modem_fw.b08
+etc/firmware/modem_fw.b09
+etc/firmware/modem_fw.b10
+etc/firmware/modem_fw.b13
+etc/firmware/modem_fw.b14
+etc/firmware/modem_fw.b21
+etc/firmware/modem_fw.b22
+etc/firmware/modem_fw.b23
+etc/firmware/modem_fw.b25
+etc/firmware/modem_fw.b26
+etc/firmware/modem_fw.b29
+etc/firmware/modem_fw.mdt
+
+# Q6 firmware
+etc/firmware/q6.b00
+etc/firmware/q6.b01
+etc/firmware/q6.b03
+etc/firmware/q6.b04
+etc/firmware/q6.b05
+etc/firmware/q6.b06
+etc/firmware/q6.mdt
+
 # Qualcomm/HTC common libs
 lib/libdiag.so
 lib/libdsi_netctrl.so
