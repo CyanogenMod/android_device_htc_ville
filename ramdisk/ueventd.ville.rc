@@ -101,6 +101,9 @@
 /dev/msm_a2dp_in          0640  system       audio
 /dev/msm_amrnb_in         0640  system       audio
 
+# hardware random
+/dev/hw_random            0660  system       system
+
 # for ville sensors
 /dev/akm8975_aot          0640  compass      system
 /dev/akm8975_daemon       0640  compass      system

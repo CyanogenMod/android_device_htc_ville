@@ -209,6 +209,11 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio
 
+service qrngd /system/bin/qrngd -f
+    class main
+    user root
+    group root
+
 service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_config
     class core
     user root
