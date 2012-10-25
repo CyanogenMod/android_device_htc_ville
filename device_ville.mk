@@ -85,10 +85,6 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    gps.ville \
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.ville
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
