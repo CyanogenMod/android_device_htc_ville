@@ -137,3 +137,9 @@
 # for autobot car pc
 /dev/ttyHSUSB3                                 0660    autobot_access autobot_access
 /dev/ttyHSUSB1                                 0600    system system
+
+#Usb Stuff
+/dev/bus/usb/*            0660   root       usb
+/dev/mtp_usb              0660   root       mtp
+/dev/usb_accessory        0660   root       usb
+/dev/usb/lp*              0660   system     usb

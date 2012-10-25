@@ -8,6 +8,8 @@ on early-init
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
 
+    mkdir /mnt/usbdisk 0755 system system
+
     export EXTERNAL_STORAGE /storage/sdcard0
 
 on init
@@ -72,6 +74,10 @@ on boot
     # create symlink to qcn wpa_supplicant folder
     symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
     symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
+
+    #Essential node for usbservice
+    mkdir /dev/bus/ 755 root root
+    mkdir /dev/bus/usb 755 root root
 
     # symlink for HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
