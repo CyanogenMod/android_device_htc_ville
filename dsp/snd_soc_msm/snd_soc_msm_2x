@@ -2109,7 +2109,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPROXY Rx"
+	Name "Voice Call IPPROXY Rx"
 
 	EnableSequence
 	EndSequence
