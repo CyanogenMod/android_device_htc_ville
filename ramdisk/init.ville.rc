@@ -15,7 +15,7 @@ on early-init
 on init
     mkdir /devlog 0700 root root
 
-on emmc-fs
+on fs
     # msm8960 firmware partitions
     mkdir /tombstones 0771 system system
     mkdir /tombstones/lpass 0771 system system
