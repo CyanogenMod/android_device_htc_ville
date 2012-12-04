@@ -16,7 +16,7 @@ $(call inherit-product, device/htc/ville/device_ville.mk)
 PRODUCT_DEVICE := ville
 PRODUCT_NAME := cm_ville
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC One S
+PRODUCT_MODEL := One S
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name ect.
