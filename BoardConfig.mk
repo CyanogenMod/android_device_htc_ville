@@ -46,9 +46,6 @@ BOARD_PROVIDES_LIBRIL := true
 TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
 
-# Lights
-TARGET_PROVIDES_LIBLIGHTS := true
-
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
