@@ -78,10 +78,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# GPS
-#PRODUCT_PACKAGES += \
-#    gps.ville \
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
