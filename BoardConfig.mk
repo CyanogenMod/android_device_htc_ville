@@ -42,10 +42,6 @@ TARGET_KERNEL_CONFIG := ville_defconfig
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 960
-TARGET_SCREEN_WIDTH := 540
-
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
