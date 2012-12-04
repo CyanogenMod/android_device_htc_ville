@@ -37,6 +37,9 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 TARGET_KERNEL_CONFIG := ville_defconfig
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ville/bluetooth
+
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
 
