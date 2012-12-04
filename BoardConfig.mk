@@ -53,10 +53,6 @@ TARGET_SCREEN_WIDTH := 540
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
 
-# Wifi
-WIFI_DRIVER_MODULE_NAME          := prima_wlan
-WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
-
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
