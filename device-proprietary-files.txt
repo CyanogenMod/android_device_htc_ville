@@ -1,0 +1,13 @@
+# Executable files
+bin/akmd
+bin/ewtzmud
+
+# Camera
+lib/libchromatix_s5k3h2yx_default_video.so
+lib/libchromatix_s5k3h2yx_hdr.so
+lib/libchromatix_s5k3h2yx_hfr.so
+lib/libchromatix_s5k3h2yx_preview.so
+lib/libchromatix_s5k3h2yx_zsl.so
+
+# Sensors
+lib/hw/sensors.ville.so
