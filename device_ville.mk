@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/ville/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
-    device/htc/ville/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/ville/keylayout/cy8c-touchkey.kl:system/usr/keylayout/cy8c-touchkey.kl \
     device/htc/ville/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/ville/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
