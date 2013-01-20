@@ -1,0 +1,31 @@
+on early-init
+    mkdir /storage 0050 system sdcard_r
+    mkdir /storage/sdcard0 0000 system system
+
+    # for backwards compatibility
+    symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
+
+    export EXTERNAL_STORAGE /storage/sdcard0
+
+    setprop ro.usb.idproduct.ums 0cec
+    setprop ro.usb.idproduct.rndis 0cec
+
+on fs
+    # mount all mmc partitions
+    mount_all /fstab.ville
+
+# Services start here
+
+service akmd /system/bin/akmd
+    class main
+    user compass
+    group compass misc input
+
+service cand /system/bin/cand
+    user root
+
+service ewtzmud /system/bin/ewtzmud
+    class main
+    user system
+    group system misc input
