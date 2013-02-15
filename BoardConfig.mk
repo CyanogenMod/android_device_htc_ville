@@ -73,5 +73,8 @@ BOARD_VOLD_MAX_PARTITIONS := 36
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-# Use power button as select in recovery
-BOARD_HAS_NO_SELECT_BUTTON := true
+# Recovery
+BOARD_SUPPRESS_EMMC_WIPE := true
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_USES_MMCUTILS := true
+TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/ville/recovery/kernel

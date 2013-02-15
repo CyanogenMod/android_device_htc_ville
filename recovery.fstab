@@ -7,3 +7,4 @@
 /sdcard		vfat		/dev/block/mmcblk0p36
 /system		ext4		/dev/block/mmcblk0p33
 /misc		emmc		/dev/block/mmcblk0p23
+/devlog		ext4		/dev/block/mmcblk0p26

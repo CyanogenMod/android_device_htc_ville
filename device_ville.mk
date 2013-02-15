@@ -26,13 +26,6 @@ PRODUCT_PACKAGES += \
     fstab.ville \
     init.target.rc
 
-# recovery and custom charging
-PRODUCT_COPY_FILES += \
-    device/htc/ville/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    device/htc/ville/recovery/sbin/power_test:recovery/root/sbin/power_test \
-    device/htc/ville/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
-    device/htc/ville/recovery/sbin/detect_key:recovery/root/sbin/detect_key
-
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/ville/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
