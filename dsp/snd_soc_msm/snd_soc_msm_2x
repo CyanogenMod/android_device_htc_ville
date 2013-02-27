@@ -2111,8 +2111,8 @@ SectionDevice
 		'LINEOUT3 Volume':1:100
 		'LINEOUT1XB Volume':1:0
 		'LINEOUT3XB Volume':1:0
-		'RX3 Digital Volume':1:67
-		'RX4 Digital Volume':1:67
+		'RX3 Digital Volume':1:75
+		'RX4 Digital Volume':1:75
 		'EAR AMP EN Switch':1:1
 	EndSequence
 
