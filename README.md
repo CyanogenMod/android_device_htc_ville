@@ -1,10 +1,6 @@
-android_device_htc_ville
-========================
+HTC One S (Ville)
+=================
 
-Android device tree for HTC Ville (One S) - Jellybean Branch
+CyanogenMod device tree for the HTC One S (Ville) - CM10.1 Branch
 
-Known issues:
-* Video Camera not working
-* Front Camera not switching properly
-* GPS spam causes high battery drain
-* Wifi calling not available
+© 2013 - The CyanogenMod Project
