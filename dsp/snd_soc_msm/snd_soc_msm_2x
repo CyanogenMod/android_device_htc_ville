@@ -1585,8 +1585,8 @@ SectionDevice
 		'SLIM_0_TX Channels':0:One
 		'SLIM TX7 MUX':0:DEC6
 		'DEC6 MUX':0:ADC1
-		'DEC6 Volume':1:76
-		'ADC1 Volume':1:100
+		'DEC6 Volume':1:100
+		'ADC1 Volume':1:300
 		'MICBIAS1 CAPLESS Switch':1:0
 		'MICBIAS1 PD MODE':1:1
 	EndSequence
