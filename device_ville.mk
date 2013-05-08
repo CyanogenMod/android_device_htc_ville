@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/ville/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
-    fstab.ville \
+    fstab.qcom \
     init.target.rc
 
 # HTC BT audio config
@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
     device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    device/htc/ville/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom
 
 # Torch
 PRODUCT_PACKAGES += \

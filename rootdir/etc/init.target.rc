@@ -15,7 +15,7 @@ on early-init
 
 on fs
     # mount all mmc partitions
-    mount_all /fstab.ville
+    mount_all /fstab.qcom
 
 # Services start here
 
