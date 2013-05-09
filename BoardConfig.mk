@@ -75,3 +75,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 
 # Recovery
 TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/ville/recovery/kernel
+
+# TWRP
+DEVICE_RESOLUTION := 540x960
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_INCLUDE_DUMLOCK := true
+TW_INCLUDE_JB_CRYPTO := true
