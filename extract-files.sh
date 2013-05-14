@@ -4,4 +4,4 @@ set -e
 
 export DEVICE=ville
 export VENDOR=htc
-./../msm8960-common/extract-files.sh $@
+./../../../device/${VENDOR}/s4-common/extract-files.sh $@
