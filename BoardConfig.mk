@@ -42,6 +42,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ville/bluetooth
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
 
+# USB
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
@@ -70,14 +73,12 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744829440
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
 BOARD_FLASH_BLOCK_SIZE := 131072
-BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
+BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/ville/recovery/kernel
 TARGET_RECOVERY_FSTAB := device/htc/ville/rootdir/etc/fstab.qcom
 
 # TWRP
