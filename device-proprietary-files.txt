@@ -1,6 +1,4 @@
 # Executable files
-bin/akmd
-bin/cand
 bin/ewtzmud
 
 # Camera
