@@ -9,6 +9,7 @@
   },
   {
     "repository": "android_kernel_htc_msm8960",
-    "target_path": "kernel/htc/msm8960"
+    "target_path": "kernel/htc/msm8960",
+    "branch": "cm-10.2"
   }
 ]
