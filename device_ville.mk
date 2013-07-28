@@ -30,10 +30,6 @@ PRODUCT_PACKAGES += \
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/ville/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
-# vold config
-PRODUCT_COPY_FILES += \
-    device/htc/ville/configs/vold.fstab:system/etc/vold.fstab
-
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
