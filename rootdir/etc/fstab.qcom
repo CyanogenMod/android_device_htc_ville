@@ -17,3 +17,6 @@
 
 # USB storage
 /devices/platform/msm_hsusb_host/usb	/storage/usbdisk	auto	defaults			voldmanaged=usbdisk:auto
+
+# Recovery
+/dev/block/mmcblk0p36	/sdcard		auto	defaults	recoveryonly
