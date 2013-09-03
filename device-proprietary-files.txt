@@ -1,5 +1,6 @@
 # Executable files
 bin/ewtzmud
+bin/netmgrd
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
@@ -7,6 +8,9 @@ lib/libchromatix_s5k3h2yx_hdr.so
 lib/libchromatix_s5k3h2yx_hfr.so
 lib/libchromatix_s5k3h2yx_preview.so
 lib/libchromatix_s5k3h2yx_zsl.so
+
+# Radio
+lib/libnetmgr.so
 
 # Sensors
 lib/hw/sensors.ville.so
