@@ -43,6 +43,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
+# Media config
+PRODUCT_COPY_FILES += \
+    device/htc/ville/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/ville/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
