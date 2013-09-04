@@ -1940,6 +1940,31 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "Speaker DMIC Stereo"
+	Comment "Dual MIC Endfire Tx device"
+
+	EnableSequence
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC4
+		'DEC4 MUX':0:ADC3
+		'DEC4 Volume':1:70
+		'ADC3 Volume':1:100
+		'MICBIAS3 CAPLESS Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'ADC3 Volume':1:0
+		'DEC4 Volume':1:0
+		'DEC4 MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+		'MICBIAS3 CAPLESS Switch':1:0
+	EndSequence
+
+	ACDBID 11:2
+
+EndSection
+
+SectionDevice
 	Name "TTY Headset Rx"
 	Comment "TTY Headset Rx device"
 
