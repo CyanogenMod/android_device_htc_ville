@@ -1,4 +1,4 @@
-on early-init
+on init
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/usbdisk 0000 system system
 
