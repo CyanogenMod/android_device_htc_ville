@@ -29,3 +29,9 @@ service ewtzmud /system/bin/ewtzmud
     class main
     user system
     group system misc input
+
+service setup_fs /system/bin/setup_fs mmcblk0p34
+    class core
+    user root
+    group root
+    oneshot
