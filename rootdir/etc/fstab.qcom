@@ -28,9 +28,6 @@
 /dev/block/platform/msm_sdcc.1/by-name/userdata	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,formattable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 /dev/block/platform/msm_sdcc.1/by-name/userdata	/data		f2fs	noatime,nosuid,nodev,nodiratime,inline_xattr,inline_data,flush_merge	wait,formattable,nonremovable,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 
-# SD card
-/devices/platform/msm_sdcc.1/mmc_host/mmc0*	auto	auto	defaults		voldmanaged=sdcard0:36,noemulatedsd
-
 # USB storage
 /devices/platform/msm_hsusb_host/usb*		auto	auto	defaults		voldmanaged=usbdisk:auto
 
