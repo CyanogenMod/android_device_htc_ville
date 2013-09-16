@@ -7,8 +7,5 @@
 /dev/block/mmcblk0p34	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
 /dev/block/mmcblk0p35	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,encryptable=footer,length=-16384
 
-# SD card
-/devices/platform/msm_sdcc.1/mmc_host/mmc0	auto	auto	defaults				voldmanaged=sdcard0:36,noemulatedsd
-
 # USB storage
 /devices/platform/msm_hsusb_host/usb	auto	auto	defaults			voldmanaged=usbdisk:auto
