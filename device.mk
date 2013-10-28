@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
 
 # Torch
 PRODUCT_PACKAGES += \
-    Torch
+    OmniTorch
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
