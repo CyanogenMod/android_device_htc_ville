@@ -9,7 +9,7 @@ TARGET_SCREEN_HEIGHT := 960
 TARGET_SCREEN_WIDTH := 540
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common_full_phone.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/ville/device.mk)
