@@ -12,7 +12,7 @@ rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.ril.fast.dormancy.rule=1
-ro.telephony.ril_class=HTCQualcommRIL
+ro.telephony.ril_class=RIL
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
