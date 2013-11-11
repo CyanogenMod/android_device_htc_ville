@@ -76,7 +76,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_MAX_PARTITIONS := 36
+# OMNIROM: This is currently unused, edit MAX_PARTITIONS in system/vold/DirectVolume.h directly
+# BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/htc/ville/rootdir/etc/fstab.qcom
