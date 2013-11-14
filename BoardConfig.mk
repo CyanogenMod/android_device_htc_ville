@@ -34,7 +34,7 @@ TARGET_BOARD_INFO_FILE ?= device/htc/ville/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := ville
 
 # Kernel
-TARGET_KERNEL_CONFIG := ville_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_ville_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ville/bluetooth
