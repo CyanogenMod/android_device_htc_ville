@@ -14,11 +14,6 @@ on init
 
     export EXTERNAL_STORAGE /storage/sdcard0
 
-    setprop ro.usb.idproduct.ums 0cec
-    setprop ro.usb.idproduct.rndis 0cec
-    setprop ro.usb.idproduct.mtp 0f91
-    setprop ro.usb.idproduct.mtp_adb 0df9
-
 # Services start here
 
 service akmd /system/bin/akmd
