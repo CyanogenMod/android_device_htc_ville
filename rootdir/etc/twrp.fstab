@@ -1,0 +1,11 @@
+# mount point   fstype      device                  [device2] [parameters]
+
+/boot           emmc        /dev/block/mmcblk0p21
+/cache          ext4        /dev/block/mmcblk0p34
+/data           ext4        /dev/block/mmcblk0p35   length=-16384
+/misc           emmc        /dev/block/mmcblk0p23
+/recovery       emmc        /dev/block/mmcblk0p22
+/system         ext4        /dev/block/mmcblk0p33
+/devlog         ext4        /dev/block/mmcblk0p26
+/sdcard         vfat        /dev/block/mmcblk0p36   flags=display="Internal Storage";storage;wipeingui
+/usb-otg        vfat        /dev/block/sda1         /dev/block/sda  flags=display="USB-OTG";storage;wipeingui;removable

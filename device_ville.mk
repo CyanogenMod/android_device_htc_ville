@@ -64,7 +64,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/htc/ville/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom
+    device/htc/ville/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom \
+    device/htc/ville/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Torch
 PRODUCT_PACKAGES += \
