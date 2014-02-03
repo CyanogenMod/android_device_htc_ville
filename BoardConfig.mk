@@ -41,6 +41,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ville/bluetooth
 
 # Use libril in the device tree
 BOARD_PROVIDES_LIBRIL := true
+BOARD_RIL_FIVE_SEARCH_RESPONSES := true
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
