@@ -77,3 +77,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 36
+
+# Recovery
+TARGET_RECOVERY_FSTAB := device/htc/ville/rootdir/etc/fstab.qcom
