@@ -1,20 +1,32 @@
-# Android fstab file.
-#<src>			<mnt_point>	<type>	<mnt_flags>						<fs_mgr_flags>
-#/dev/block/mmcblk0p16	/firmware_dsps	vfat	ro,shortname=lower					wait
-/dev/block/mmcblk0p17	/firmware_radio	vfat	ro,shortname=lower					wait
-/dev/block/mmcblk0p18	/firmware_q6	vfat	ro,shortname=lower					wait
-#/dev/block/mmcblk0p19	/firmware_wcnss	vfat	ro,shortname=lower					wait
+# Copyright (C) 2014 The CyanogenMod Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-/dev/block/mmcblk0p21	/boot		emmc	defaults						defaults
-/dev/block/mmcblk0p22	/recovery	emmc	defaults						defaults
-/dev/block/mmcblk0p26	/devlog		ext4	noatime,nosuid,nodev,barrier=0				wait
-/dev/block/mmcblk0p33	/system		ext4	rw,noatime,barrier=0					wait
-/dev/block/mmcblk0p34	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
-/dev/block/mmcblk0p35	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,encryptable=footer,length=-16384
+#<src>			<mnt_point>	<type>	<mnt_flags>						<fs_mgr_flags>
+#/dev/block/platform/msm_sdcc.1/by-name/dsps	/firmware_dsps	vfat	ro,shortname=lower					wait
+/dev/block/platform/msm_sdcc.1/by-name/radio	/firmware_radio	vfat	ro,shortname=lower					wait
+/dev/block/platform/msm_sdcc.1/by-name/adsp	/firmware_q6	vfat	ro,shortname=lower					wait
+#/dev/block/platform/msm_sdcc.1/by-name/wcnss	/firmware_wcnss	vfat	ro,shortname=lower					wait
+
+/dev/block/platform/msm_sdcc.1/by-name/boot	/boot		emmc	defaults						defaults
+/dev/block/platform/msm_sdcc.1/by-name/recovery	/recovery	emmc	defaults						defaults
+/dev/block/platform/msm_sdcc.1/by-name/devlog	/devlog		ext4	noatime,nosuid,nodev,barrier=0				wait
+/dev/block/platform/msm_sdcc.1/by-name/system	/system		ext4	rw,noatime,barrier=0					wait
+/dev/block/platform/msm_sdcc.1/by-name/cache	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
+/dev/block/platform/msm_sdcc.1/by-name/userdata	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,encryptable=/dev/block/platform/msm_sdcc.1/by-name/extra
 
 # SD card
-/devices/platform/msm_sdcc.1/mmc_host/mmc0	auto	auto	defaults				voldmanaged=sdcard0:36,noemulatedsd
-
+/devices/platform/msm_sdcc.1/mmc_host/mmc0	auto	auto	defaults		voldmanaged=sdcard0:36,noemulatedsd
 
 # USB storage
-/devices/platform/msm_hsusb_host/usb	auto	auto	defaults			voldmanaged=usbdisk:auto
+/devices/platform/msm_hsusb_host/usb		auto	auto	defaults		voldmanaged=usbdisk:auto
