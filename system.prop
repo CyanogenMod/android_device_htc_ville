@@ -14,7 +14,7 @@ ro.ril.fast.dormancy.rule=1
 ro.telephony.ril_class=HTCQualcommRIL
 
 # UMS
-persist.sys.usb.config=mass_storage,adb
+persist.sys.usb.config=mtp
 
 # Recovery
 ro.cwm.forbid_format=/firmware_radio,/firmware_q6,/devlog
