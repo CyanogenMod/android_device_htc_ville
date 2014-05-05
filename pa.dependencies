@@ -1,0 +1,108 @@
+[
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_packages_apps_CMFileManager",
+        "target_path":  "packages/apps/CMFileManager",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_audio",
+        "target_path":  "hardware/qcom/audio",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "github",
+        "repository":   "SlimRoms/hardware_qcom_audio-caf",
+        "target_path":  "hardware/qcom/audio-caf",
+        "revision":     "kk4.4"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_display",
+        "target_path":  "hardware/qcom/display",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "github",
+        "repository":   "SlimRoms/hardware_qcom_display-caf",
+        "target_path":  "hardware/qcom/display-caf",
+        "revision":     "kk4.4"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_media",
+        "target_path":  "hardware/qcom/media",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "github",
+        "repository":   "SlimRoms/hardware_qcom_media-caf",
+        "target_path":  "hardware/qcom/media-caf",
+        "revision":     "kk4.4"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_bt",
+        "target_path":  "hardware/qcom/bt",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_gps",
+        "target_path":  "hardware/qcom/gps",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_keymaster",
+        "target_path":  "hardware/qcom/keymaster",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_power",
+        "target_path":  "hardware/qcom/power",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_sensors",
+        "target_path":  "hardware/qcom/sensors",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_wlan",
+        "target_path":  "hardware/qcom/wlan",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "cm",
+        "repository":   "CyanogenMod/android_hardware_qcom_msm8960",
+        "target_path":  "hardware/qcom/msm8960",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "github",
+        "repository":   "CyanogenMod/android_kernel_htc_msm8960",
+        "target_path":  "kernel/htc/msm8960",
+        "revision":     "cm-11.0"
+    },
+    {
+        "remote":       "github",
+        "repository":   "android_device_htc_msm8960-common",
+        "target_path":  "device/htc/msm8960-common"
+    },
+    {
+        "remote":       "github",
+        "repository":   "CyanogenMod/android_device_htc_ville",
+        "target_path":  "device/htc/ville"
+    },
+    {
+        "remote":       "github",
+        "repository":   "TheMuppets/proprietary_vendor_htc",
+        "target_path":  "vendor/htc",
+        "revision":     "cm-11.0"
+    }
+]

@@ -61,9 +61,9 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
-# Torch
+# Lightbulb
 PRODUCT_PACKAGES += \
-    Torch
+    Lightbulb
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
