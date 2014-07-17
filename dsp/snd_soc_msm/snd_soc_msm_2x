@@ -2525,6 +2525,184 @@ SectionDevice
 EndSection
 
 SectionDevice
+	Name "VOIP Earpiece"
+	Comment "Handset Rx device"
+
+	EnableSequence
+		'SLIM_0_RX Channels':0:One
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 DSM MUX':0:DSM_INV
+		'LINEOUT1 DAC Switch':1:1
+		'LINEOUT3 DAC Switch':1:1
+		'LINEOUT1 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'LINEOUT1XB Volume':1:0
+		'LINEOUT3XB Volume':1:0
+		'RX3 Digital Volume':1:68
+		'RX4 Digital Volume':1:68
+		'EAR AMP EN Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'EAR AMP EN Switch':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 DAC Switch':1:0
+		'LINEOUT3 DAC Switch':1:0
+		'RX3 MIX1 INP1':0:ZERO
+		'RX4 DSM MUX':0:CIC_OUT
+	EndSequence
+
+	ACDBID 202:1
+EndSection
+
+SectionDevice
+	Name "VOIP Handset"
+	Comment "Handset Tx device"
+
+	EnableSequence
+		'SLIM_0_TX Channels':0:Two
+		'SLIM TX7 MUX':0:DEC6
+		'DEC6 MUX':0:ADC1
+		'DEC6 Volume':1:68
+		'ADC1 Volume':1:100
+		'MICBIAS1 CAPLESS Switch':1:1
+		'SLIM TX8 MUX':0:DEC4
+		'DEC4 MUX':0:ADC3
+		'DEC4 Volume':1:68
+		'ADC3 Volume':1:100
+		'MICBIAS3 CAPLESS Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'ADC3 Volume':1:0
+		'ADC1 Volume':1:0
+		'DEC4 Volume':1:0
+		'DEC6 Volume':1:0
+		'DEC4 MUX':0:ZERO
+		'DEC6 MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+		'SLIM TX8 MUX':0:ZERO
+		'MICBIAS1 CAPLESS Switch':1:0
+		'MICBIAS3 CAPLESS Switch':1:0
+	EndSequence
+
+	ACDBID 102:2
+EndSection
+
+SectionDevice
+	Name "VOIP Headphones"
+	Comment "Headset Rx device"
+
+	EnableSequence
+		'SLIM_0_RX Channels':0:One
+		'RX1 MIX1 INP1':0:RX1
+		'RX2 MIX1 INP1':0:RX1
+		'HPHL DAC Switch':1:1
+		'HPHR DAC Switch':1:1
+		'RX1 Digital Volume':1:68
+		'RX2 Digital Volume':1:68
+		'HPHL Volume':1:60
+		'HPHR Volume':1:60
+	EndSequence
+
+	DisableSequence
+		'HPHL Volume':1:0
+		'HPHR Volume':1:0
+		'RX1 Digital Volume':1:0
+		'RX2 Digital Volume':1:0
+		'HPHL DAC Switch':1:0
+		'HPHR DAC Switch':1:0
+		'RX1 MIX1 INP1':0:ZERO
+		'RX2 MIX1 INP1':0:ZERO
+	EndSequence
+
+	ACDBID 401:1
+EndSection
+
+SectionDevice
+	Name "VOIP Headset"
+	Comment "Headset Tx device"
+
+	EnableSequence
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC5
+		'DEC5 MUX':0:ADC2
+		'DEC5 Volume':1:70
+		'ADC2 Volume':1:100
+	EndSequence
+
+	DisableSequence
+		'ADC2 Volume':1:0
+		'DEC5 Volume':1:0
+		'DEC5 MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+	EndSequence
+
+	ACDBID 301:2
+EndSection
+
+SectionDevice
+	Name "VOIP Line"
+	Comment "Speaker Tx device"
+
+	EnableSequence
+		'SLIM_0_TX Channels':0:One
+		'SLIM TX7 MUX':0:DEC4
+		'DEC4 MUX':0:ADC3
+		'DEC4 Volume':1:70
+		'ADC3 Volume':1:100
+		'MICBIAS3 CAPLESS Switch':1:1
+	EndSequence
+
+	DisableSequence
+		'ADC3 Volume':1:0
+		'DEC4 Volume':1:0
+		'DEC4 MUX':0:ZERO
+		'SLIM TX7 MUX':0:ZERO
+		'MICBIAS3 CAPLESS Switch':1:0
+	EndSequence
+
+	ACDBID 504:2
+EndSection
+
+SectionDevice
+	Name "VOIP Speaker"
+	Comment "Speaker Rx device"
+
+	EnableSequence
+		'SLIM_0_RX Channels':0:One
+		'RX3 MIX1 INP1':0:RX1
+		'RX4 DSM MUX':0:DSM_INV
+		'LINEOUT1 DAC Switch':1:1
+		'LINEOUT3 DAC Switch':1:1
+		'LINEOUT1 Volume':1:100
+		'LINEOUT3 Volume':1:100
+		'RX3 Digital Volume':1:75
+		'RX4 Digital Volume':1:75
+		'SPK AMP EN Switch':1:1
+		'FENS Enable':1:1
+	EndSequence
+
+	DisableSequence
+		'FENS Enable':1:0
+		'SPK AMP EN Switch':1:0
+		'LINEOUT1 Volume':1:0
+		'LINEOUT3 Volume':1:0
+		'RX3 Digital Volume':1:0
+		'RX4 Digital Volume':1:0
+		'LINEOUT1 DAC Switch':1:0
+		'LINEOUT3 DAC Switch':1:0
+		'RX4 DSM MUX':0:CIC_OUT
+		'RX3 MIX1 INP1':0:ZERO
+	EndSequence
+
+	ACDBID 604:1
+EndSection
+
+SectionDevice
 	Name "Voice Recognition"
 	Comment "VoIP Sec Recog Main Mic Tx device"
 
