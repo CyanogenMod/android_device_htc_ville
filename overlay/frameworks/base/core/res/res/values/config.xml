@@ -21,9 +21,6 @@
      for different hardware and product builds. -->
 <resources>
 
-    <!-- Button illumination -->
-    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
-
     <!-- Hardware 'face' keys present on the device, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -36,12 +33,5 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareKeys">19</integer>
-
-    <!-- Specifies the amount of time to disable virtual keys after the screen is touched
-         in order to filter out accidental virtual key presses due to swiping gestures
-         or taps near the edge of the display.  May be 0 to disable the feature.
-         It is recommended that this value be no more than 250 ms.
-         This feature should be disabled for most devices. -->
-    <integer name="config_virtualKeyQuietTimeMillis">250</integer>
 
 </resources>
