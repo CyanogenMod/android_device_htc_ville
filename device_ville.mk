@@ -72,9 +72,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     dalvik.vm.dexopt-flags=m=y
 
-# We have enough space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
