@@ -16,11 +16,6 @@ on init
 
 # Services start here
 
-service akmd /system/bin/akmd
-    class main
-    user compass
-    group compass misc input
-
 service ewtzmud /system/bin/ewtzmud
     class main
     user system
