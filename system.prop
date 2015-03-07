@@ -14,3 +14,6 @@ ro.telephony.ril_class=HTCQualcommRIL
 
 # UMS
 persist.sys.usb.config=mtp
+
+# OTG
+persist.sys.isUsbOtgEnabled=true
