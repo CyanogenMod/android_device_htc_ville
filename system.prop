@@ -12,5 +12,8 @@ rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ro.telephony.ril_class=HTCQualcommRIL
 
+# OTG
+persist.sys.isUsbOtgEnabled=true
+
 # UMS
 persist.sys.usb.config=mtp
