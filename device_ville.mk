@@ -61,6 +61,13 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
     device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
 
+# FM radio
+PRODUCT_PACKAGES += \
+    FM2 \
+    FMRecord \
+    libqcomfm_jni \
+    qcom.fmradio
+
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
