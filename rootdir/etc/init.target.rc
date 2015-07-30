@@ -21,12 +21,6 @@ service ewtzmud /system/bin/ewtzmud
     user system
     group system misc input
 
-service setup_fs /system/bin/setup_fs mmcblk0p34
-    class core
-    user root
-    group root
-    oneshot
-
 service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
     class late_start
     disabled
