@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,5 +14,15 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_ville.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from ville device
+$(call inherit-product, device/htc/ville/device.mk)
+
+# Set those variables here to overwrite the inherited values.
+PRODUCT_DEVICE := ville
+PRODUCT_NAME := full_ville
+PRODUCT_BRAND := htc
+PRODUCT_MODEL := HTC One S
+PRODUCT_MANUFACTURER := HTC

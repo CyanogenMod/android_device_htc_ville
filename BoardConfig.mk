@@ -27,10 +27,8 @@
 # inherit from S4 common
 -include device/htc/s4-common/BoardConfigCommon.mk
 
-# Require bootloader version
-TARGET_BOARD_INFO_FILE ?= device/htc/ville/board-info.txt
-
 # Bootloader
+TARGET_BOARD_INFO_FILE ?= device/htc/ville/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := ville
 
 # Kernel
@@ -41,10 +39,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/ville/bluetooth
 
 # Camera
 BOARD_CAMERA_FRONT_VGA := true
-
-# Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
-BOARD_RIL_FIVE_SEARCH_RESPONSES := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -80,9 +74,10 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 268434944
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 37
-
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
 TARGET_RECOVERY_FSTAB := device/htc/ville/rootdir/etc/fstab.qcom
+
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+BOARD_RIL_FIVE_SEARCH_RESPONSES := true
