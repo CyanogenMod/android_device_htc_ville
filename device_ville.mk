@@ -51,10 +51,8 @@ PRODUCT_COPY_FILES += \
 
 # FM radio
 PRODUCT_PACKAGES += \
-    FM2 \
-    FMRecord \
-    libqcomfm_jni \
-    qcom.fmradio
+    FMRadio \
+    libfmjni
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
