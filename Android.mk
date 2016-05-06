@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2012 The Android Open-Source Project
+# Copyright 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE),ville)
 LOCAL_PATH := $(call my-dir)
-    include $(call first-makefiles-under,$(LOCAL_PATH))
+
+ifeq ($(TARGET_DEVICE),ville)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
 endif
