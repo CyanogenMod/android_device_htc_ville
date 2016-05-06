@@ -14,27 +14,42 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# common S4 configs
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/htc/ville/ville-vendor.mk)
+
+# Inherit s4-common
 $(call inherit-product, device/htc/s4-common/s4.mk)
 
+# Overlays
 DEVICE_PACKAGE_OVERLAYS += device/htc/ville/overlay
 
-# Boot ramdisk setup
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.target.rc
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Sound configs
+# Boot animation
+TARGET_SCREEN_HEIGHT := 960
+TARGET_SCREEN_WIDTH := 540
+
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
+# Audio
 PRODUCT_COPY_FILES += \
     device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
-# Media config
-PRODUCT_COPY_FILES += \
-    device/htc/ville/configs/media_profiles.xml:system/etc/media_profiles.xml
+# FM radio
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
-# Keylayouts and Keychars
+# Input
+PRODUCT_COPY_FILES += \
+    device/htc/ville/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
+    device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
+    device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
+
 PRODUCT_COPY_FILES += \
     device/htc/ville/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
     device/htc/ville/keylayout/cy8c-touchkey.kl:system/usr/keylayout/cy8c-touchkey.kl \
@@ -43,38 +58,11 @@ PRODUCT_COPY_FILES += \
     device/htc/ville/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
     device/htc/ville/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl
 
-# Input device config
+# Media config
 PRODUCT_COPY_FILES += \
-    device/htc/ville/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc \
-    device/htc/ville/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/ville/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
+    device/htc/ville/configs/media_profiles.xml:system/etc/media_profiles.xml
 
-# FM radio
+# Ramdisk
 PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
-
-# Extra properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y
-
-# Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-PRODUCT_LOCALES += en_US hdpi
-
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/ville/ville-vendor.mk)
-
-# call dalvik heap config
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
-# Discard inherited values and use our own instead.
-PRODUCT_DEVICE := ville
-PRODUCT_NAME := ville
-PRODUCT_BRAND := htc
-PRODUCT_MODEL := One S
-PRODUCT_MANUFACTURER := HTC
+    fstab.qcom \
+    init.target.rc
