@@ -35,6 +35,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
+    device/htc/ville/configs/audio_policy.conf:system/etc/audio_policy.conf \
     device/htc/ville/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # FM radio

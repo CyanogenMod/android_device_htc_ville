@@ -27,6 +27,14 @@
 # inherit from S4 common
 -include device/htc/s4-common/BoardConfigCommon.mk
 
+# Audio
+AUDIO_FEATURE_ENABLED_FM := true
+BOARD_USES_FLUENCE_INCALL := true
+BOARD_USES_LEGACY_ALSA_AUDIO := true
+BOARD_USES_SEPERATED_AUDIO_INPUT := true
+BOARD_USES_SEPERATED_VOIP := true
+QCOM_FM_ENABLED := true
+
 # Bootloader
 TARGET_BOARD_INFO_FILE ?= device/htc/ville/board-info.txt
 TARGET_BOOTLOADER_BOARD_NAME := ville

@@ -4,6 +4,14 @@
 
 ro.sf.lcd_density=240
 
+# Audio
+persist.audio.fluence.mode=endfire
+persist.audio.handset.mic=digital
+persist.audio.speaker.location=high
+persist.audio.vr.enable=false
+qcom.hw.aac.encoder=true
+ro.qc.sdk.audio.fluencetype=fluence
+
 # RIL properties
 mobiledata.interfaces=rmnet0
 ro.telephony.default_network=0
